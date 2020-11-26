@@ -1,0 +1,60 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/benja/Google Drive/HDA/Shader/Aufgaben/Framework/Shader_workshop_1/CGA218CMake/libs/stb/stb_image.c
+stb_image.h
+C:/Users/benja/Google Drive/HDA/Shader/Aufgaben/Framework/Shader_workshop_1/CGA218CMake/libs/stb/stb_image.h
+
+C:/Users/benja/Google Drive/HDA/Shader/Aufgaben/Framework/Shader_workshop_1/CGA218CMake/libs/stb/stb_image.h
+stb_image.h
+C:/Users/benja/Google Drive/HDA/Shader/Aufgaben/Framework/Shader_workshop_1/CGA218CMake/libs/stb/stb_image.h
+stdio.h
+-
+stdarg.h
+-
+stddef.h
+-
+stdlib.h
+-
+string.h
+-
+limits.h
+-
+math.h
+-
+stdio.h
+-
+assert.h
+-
+stdint.h
+-
+emmintrin.h
+-
+intrin.h
+-
+arm_neon.h
+-
+
+C:/Users/benja/Google Drive/HDA/Shader/Aufgaben/Framework/Shader_workshop_1/CGA218CMake/libs/stb/stb_image_write.c
+stb_image_write.h
+C:/Users/benja/Google Drive/HDA/Shader/Aufgaben/Framework/Shader_workshop_1/CGA218CMake/libs/stb/stb_image_write.h
+
+C:/Users/benja/Google Drive/HDA/Shader/Aufgaben/Framework/Shader_workshop_1/CGA218CMake/libs/stb/stb_image_write.h
+stdio.h
+-
+stdarg.h
+-
+stdlib.h
+-
+string.h
+-
+math.h
+-
+assert.h
+-
+

@@ -1,0 +1,6 @@
+An OpenGL error occured at file: "..\..\..\src\Framework\Assets\ShaderProgram.cpp", line: 47:
+invalid operation
+An OpenGL error occured at file: "..\..\..\src\Framework\Assets\ShaderProgram.cpp", line: 47:
+invalid enum
+An OpenGL error occured at file: "..\..\..\src\Framework\Assets\ShaderProgram.cpp", line: 47:
+invalid enum

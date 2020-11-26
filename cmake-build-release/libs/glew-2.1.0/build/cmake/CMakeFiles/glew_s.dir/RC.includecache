@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/benja/Google Drive/HDA/Shader/Aufgaben/Framework/Shader_workshop_1/CGA218CMake/libs/glew-2.1.0/build/glew.rc
+windows.h
+-
+
