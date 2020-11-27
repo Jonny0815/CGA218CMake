@@ -1,8 +1,5 @@
 #include "Scene.h"
-#include <AssetManager.h>
-
-
-
+using namespace glm;
 Scene::Scene(GameWindow * window) :
 	m_window(window)
 {
@@ -12,6 +9,9 @@ Scene::Scene(GameWindow * window) :
 Scene::~Scene()
 {}
 
+
+Renderable renderable; 
+vector<Mesh> meshesFromObj;
 bool Scene::init()
 {
 	try
@@ -20,48 +20,23 @@ bool Scene::init()
 		m_assets.addShaderProgram("shader", AssetManager::createShaderProgram("assets/shaders/vertex.glsl", "assets/shaders/fragment.glsl"));
 		m_shader = m_assets.getShaderProgram("shader");
 
-		/*
-		 * ************
-		 * Place your code here!
-		 * ************
-		 */
+		OBJResult obRes = OBJLoader::loadOBJ("assets/models/sphere.obj",false,false);
+		for (size_t i = 0; i < obRes.objects[0].meshes.size(); i++) {
+			OBJMesh m = obRes.objects[0].meshes[i];
+			vector<VertexAttribute> va = m.atts; 
+			vector<Vertex> v = m.vertices; 
+			vector<Index> ind = m.indices; 
+			Mesh me(v, va, ind);
+			meshesFromObj.push_back(me);
+		}
+		renderable = Renderable(meshesFromObj); 
 
-		float vertices[] = {-0.5, -0.5, 0.0, 0.0, 1.0,
-							0.5, -0.5, 0.0, 0.0, 1.0,
-							0.5, 0.5, 0.0, 1.0, 0.0,
-							-0.5, 0.5, 0.0, 1.0, 0.0,
-							0.0, 1.0, 1.0, 0.0, 0.0};
-		
-		int indices[] = {	0, 1, 2,
-							0, 2, 3,
-							4, 2, 3
-		};
-
-		glGenVertexArrays(1,&vaoID);
-		glGenBuffers(1, &vboID);
-		glGenBuffers(1, &iboID);
-
-
-		glBindVertexArray(vaoID);
-		glBindBuffer(GL_ARRAY_BUFFER, vboID);
-
-		glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), &vertices, GL_STATIC_DRAW);
-
-		glVertexAttribPointer(0, 2, GL_FLOAT, false, 5 * sizeof(float), (void*)0);
-		glEnableVertexAttribArray(0);
-
-		glVertexAttribPointer(1, 3, GL_FLOAT, false, 5 * sizeof(float), (void*)(2 * sizeof(float)));
-		glEnableVertexAttribArray(1);
-
-		
-		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, iboID);
-		glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
-
-		//initial opengl state
 		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
         std::cout << "Scene initialization done\n";
-
+		glEnable(GL_CULL_FACE); 
+		glFrontFace(GL_CCW);
+		glCullFace(GL_BACK); 
         return true;
 	}
 	catch (std::exception& ex)
@@ -77,20 +52,7 @@ void Scene::shutdown()
 
 void Scene::render(float dt)
 {
-	glClear(GL_COLOR_BUFFER_BIT);
-	m_shader->use();
-
-    /*
-    * ************
-    * Place your code here!
-    * ************
-    */
-
-	glBindVertexArray(vaoID);
-
-	glDrawElements(GL_TRIANGLES, 9, GL_UNSIGNED_INT, 0);
-
-	glBindVertexArray(0);
+	renderable.render(m_shader); 
 
 }
 

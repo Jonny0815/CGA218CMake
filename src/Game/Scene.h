@@ -4,6 +4,10 @@
 #include <ShaderProgram.h>
 #include <memory>
 #include <AssetManager.h>
+#include <CommonTypes.h>
+#include <Mesh.h>
+#include <Renderable.h>
+#include <OBJLoader.h>
 
 class Scene
 {
@@ -27,8 +31,7 @@ private:
 	GameWindow* m_window;
 	AssetManager m_assets;
     ShaderProgram* m_shader;
-    GLuint vaoID, vboID, iboID;
-	
+    GLuint vaoID, vboID;
 
 };
 

@@ -3,7 +3,7 @@ if(NOT EXISTS "C:/Users/Jonny0815/source/repos/CGA218CMake/out/build/x64-Debug/l
 endif(NOT EXISTS "C:/Users/Jonny0815/source/repos/CGA218CMake/out/build/x64-Debug/libs/glm-master/install_manifest.txt")
 
 if (NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set (CMAKE_INSTALL_PREFIX "C:/Users/Jonny0815/Source/Repos/CGA218CMake/out/install/x64-Debug")
+  set (CMAKE_INSTALL_PREFIX "C:/Users/Jonny0815/source/repos/CGA218CMake/out/install/x64-Debug")
 endif ()
  message(${CMAKE_INSTALL_PREFIX})
 

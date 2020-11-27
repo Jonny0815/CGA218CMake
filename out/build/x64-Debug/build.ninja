@@ -83,6 +83,24 @@ build CMakeFiles\CGA218.dir\src\Framework\SceneElements\Transform.cpp.obj: CXX_C
   TARGET_COMPILE_PDB = CMakeFiles\CGA218.dir\
   TARGET_PDB = CGA218.pdb
 
+build CMakeFiles\CGA218.dir\src\Framework\SceneElements\Mesh.cpp.obj: CXX_COMPILER__CGA218 ..\..\..\src\Framework\SceneElements\Mesh.cpp || cmake_object_order_depends_target_CGA218
+  DEFINES = -DGLEW_STATIC
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\src -I..\..\..\src\Framework\Assets -I..\..\..\src\Framework\Rendering -I..\..\..\src\Framework\SceneElements -I..\..\..\src\Game -I..\..\..\framework -I..\..\..\libs\glfw-3.2.1\include -I..\..\..\libs\glew-2.1.0\include -I..\..\..\libs\glew-2.1.0\include\GL -I..\..\..\libs\glm-master -I..\..\..\libs\stb
+  OBJECT_DIR = CMakeFiles\CGA218.dir
+  OBJECT_FILE_DIR = CMakeFiles\CGA218.dir\src\Framework\SceneElements
+  TARGET_COMPILE_PDB = CMakeFiles\CGA218.dir\
+  TARGET_PDB = CGA218.pdb
+
+build CMakeFiles\CGA218.dir\src\Framework\SceneElements\Renderable.cpp.obj: CXX_COMPILER__CGA218 ..\..\..\src\Framework\SceneElements\Renderable.cpp || cmake_object_order_depends_target_CGA218
+  DEFINES = -DGLEW_STATIC
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -I..\..\..\src -I..\..\..\src\Framework\Assets -I..\..\..\src\Framework\Rendering -I..\..\..\src\Framework\SceneElements -I..\..\..\src\Game -I..\..\..\framework -I..\..\..\libs\glfw-3.2.1\include -I..\..\..\libs\glew-2.1.0\include -I..\..\..\libs\glew-2.1.0\include\GL -I..\..\..\libs\glm-master -I..\..\..\libs\stb
+  OBJECT_DIR = CMakeFiles\CGA218.dir
+  OBJECT_FILE_DIR = CMakeFiles\CGA218.dir\src\Framework\SceneElements
+  TARGET_COMPILE_PDB = CMakeFiles\CGA218.dir\
+  TARGET_PDB = CGA218.pdb
+
 build CMakeFiles\CGA218.dir\src\Game\Game.cpp.obj: CXX_COMPILER__CGA218 ..\..\..\src\Game\Game.cpp || cmake_object_order_depends_target_CGA218
   DEFINES = -DGLEW_STATIC
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
@@ -145,7 +163,7 @@ build CMakeFiles\CGA218.dir\framework\OBJLoader.cpp.obj: CXX_COMPILER__CGA218 ..
 #############################################
 # Link the executable CGA218.exe
 
-build CGA218.exe: CXX_EXECUTABLE_LINKER__CGA218 CMakeFiles\CGA218.dir\src\main.cpp.obj CMakeFiles\CGA218.dir\src\Framework\Assets\AssetManager.cpp.obj CMakeFiles\CGA218.dir\src\Framework\Assets\ShaderProgram.cpp.obj CMakeFiles\CGA218.dir\src\Framework\Rendering\Primitives.cpp.obj CMakeFiles\CGA218.dir\src\Framework\SceneElements\Transform.cpp.obj CMakeFiles\CGA218.dir\src\Game\Game.cpp.obj CMakeFiles\CGA218.dir\src\Game\Scene.cpp.obj CMakeFiles\CGA218.dir\framework\GameWindow.cpp.obj CMakeFiles\CGA218.dir\framework\glerror.cpp.obj CMakeFiles\CGA218.dir\framework\Input.cpp.obj CMakeFiles\CGA218.dir\framework\OBJLoader.cpp.obj | libs\glfw-3.2.1\src\glfw3.lib lib\libglew32d.lib libs\stb\stb.lib || lib\libglew32d.lib libs\glfw-3.2.1\src\glfw3.lib libs\stb\stb.lib
+build CGA218.exe: CXX_EXECUTABLE_LINKER__CGA218 CMakeFiles\CGA218.dir\src\main.cpp.obj CMakeFiles\CGA218.dir\src\Framework\Assets\AssetManager.cpp.obj CMakeFiles\CGA218.dir\src\Framework\Assets\ShaderProgram.cpp.obj CMakeFiles\CGA218.dir\src\Framework\Rendering\Primitives.cpp.obj CMakeFiles\CGA218.dir\src\Framework\SceneElements\Transform.cpp.obj CMakeFiles\CGA218.dir\src\Framework\SceneElements\Mesh.cpp.obj CMakeFiles\CGA218.dir\src\Framework\SceneElements\Renderable.cpp.obj CMakeFiles\CGA218.dir\src\Game\Game.cpp.obj CMakeFiles\CGA218.dir\src\Game\Scene.cpp.obj CMakeFiles\CGA218.dir\framework\GameWindow.cpp.obj CMakeFiles\CGA218.dir\framework\glerror.cpp.obj CMakeFiles\CGA218.dir\framework\Input.cpp.obj CMakeFiles\CGA218.dir\framework\OBJLoader.cpp.obj | libs\glfw-3.2.1\src\glfw3.lib lib\libglew32d.lib libs\stb\stb.lib || lib\libglew32d.lib libs\glfw-3.2.1\src\glfw3.lib libs\stb\stb.lib
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = libs\glfw-3.2.1\src\glfw3.lib lib\libglew32d.lib opengl32.lib glu32.lib libs\stb\stb.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib

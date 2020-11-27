@@ -763,7 +763,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Users/Jonny0815/Source/Repos/CGA218CMake/out/install/x64-Debug"
+			"value" : "C:/Users/Jonny0815/source/repos/CGA218CMake/out/install/x64-Debug"
 		},
 		{
 			"name" : "CMAKE_INSTALL_RUNSTATEDIR",
@@ -1963,7 +1963,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/Jonny0815/Source/Repos/CGA218CMake/out/install/x64-Debug"
+			"value" : "C:/Users/Jonny0815/source/repos/CGA218CMake/out/install/x64-Debug"
 		},
 		{
 			"name" : "external_dependencies_BINARY_DIR",
