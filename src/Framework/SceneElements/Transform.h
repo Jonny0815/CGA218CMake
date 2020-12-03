@@ -15,6 +15,8 @@ private:
 	glm::vec3 m_yaxis;
 	glm::vec3 m_zaxis;
 
+	Transform* m_parent;
+
 	void updateTransformMatrix();
 
 public:
@@ -45,6 +47,9 @@ public:
 	void rotateLocal(const glm::quat& deltaRot);
 
 	void scale(const glm::vec3& scale);
+
+	Transform* getParent();
+	void Transform::setParent(Transform*);
 
 	const glm::vec3& getXAxis();
 	const glm::vec3& getYAxis();

@@ -52,7 +52,7 @@ void Scene::shutdown()
 
 void Scene::render(float dt)
 {
-	renderable.render(m_shader); 
+	renderable.render(m_shader, dt); 
 
 }
 

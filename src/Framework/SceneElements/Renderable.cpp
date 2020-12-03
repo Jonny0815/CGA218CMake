@@ -15,10 +15,10 @@ void Renderable::addMeshes(vector<Mesh> meshes) {
 	}
 }
 
-void Renderable::render(ShaderProgram *shader) {
+void Renderable::render(ShaderProgram *shader, float dt) {
 
 	for (size_t i = 0; i < meshList.size(); i++) {
-		meshList[i].render(shader); 
+		meshList[i].render(shader, dt, getTransformMatrix()); 
 	}
 
 }

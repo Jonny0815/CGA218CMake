@@ -13,13 +13,14 @@ void Transform::updateTransformMatrix()
 
 Transform::Transform() :
 	m_position(0.0f),
-	m_rotation(),
+	m_rotation(1,0,0,0),
 	m_scale(1.0f),
 	m_transformMatrix(),
 	m_xaxis(1.0f, 0.0f, 0.0f),
 	m_yaxis(0.0f, 1.0f, 0.0f),
 	m_zaxis(0.0f, 1.0f, 0.0f),
 	m_matrixDirty(true)
+	//m_parent()
 {}
 
 Transform::Transform(const glm::mat4 & transformMatrix) :
@@ -115,8 +116,10 @@ void Transform::translateLocal(const glm::vec3 & deltaPos)
 
 void Transform::rotate(const glm::quat & deltaRot)
 {
+
 	m_rotation = glm::normalize(deltaRot * m_rotation);
 	m_matrixDirty = true;
+
 }
 
 void Transform::rotateLocal(const glm::quat & deltaRot)
@@ -198,6 +201,13 @@ glm::mat4 Transform::getInverseMatrix()
 	return glm::inverse(m_transformMatrix);
 }
 
+void Transform::setParent(Transform* parent){
+	m_parent = parent;
+}
+
+Transform* Transform::getParent(){
+	return m_parent;
+}
 
 Transform::~Transform()
 {}
