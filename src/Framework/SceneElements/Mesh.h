@@ -11,7 +11,7 @@ public:
 	~Mesh();
 	Mesh();
 	Mesh(vector<Vertex>, vector<VertexAttribute>, vector<Index>);
-	void render(ShaderProgram*, float, glm::mat4);
+	void render();
 	void setup();
 	unsigned int VBO, VAO, IBO;
 

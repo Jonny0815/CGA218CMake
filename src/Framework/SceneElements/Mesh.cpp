@@ -11,12 +11,9 @@ Mesh::Mesh(vector<Vertex> vertecies, vector<VertexAttribute> attributes, vector<
 		setup(); 
 }
 //todo: render shadder mitgeben
-void Mesh::render(ShaderProgram* m_shader, float dt, glm::mat4 transformMatrix) {
-		glClear(GL_COLOR_BUFFER_BIT);
-		m_shader->use();
-		m_shader->setUniform("dt", dt);
-		m_shader->setUniform("tMat", transformMatrix, false);
-		cout << dt << endl;
+void Mesh::render() {
+		
+		
 		glBindVertexArray(VAO); // seeing as we only have a single VAO there's no need to bind it every time, but we'll do so to keep things a bit more organized
 		glDrawElements(GL_TRIANGLES, _indicies.size(), GL_UNSIGNED_INT, 0);
 		glBindVertexArray(0);

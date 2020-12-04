@@ -4,3 +4,17 @@ An OpenGL error occured at file: "..\..\..\src\Framework\Assets\ShaderProgram.cp
 invalid enum
 An OpenGL error occured at file: "..\..\..\src\Framework\Assets\ShaderProgram.cpp", line: 47:
 invalid enum
+An OpenGL error occured at file: "C:\Users\Jonny0815\source\repos\CGA218CMake\src\Framework\Assets\ShaderProgram.h", line: 225:
+invalid operation
+An OpenGL error occured at file: "C:\Users\Jonny0815\source\repos\CGA218CMake\src\Framework\Assets\ShaderProgram.h", line: 225:
+invalid operation
+An OpenGL error occured at file: "C:\Users\Jonny0815\source\repos\CGA218CMake\src\Framework\Assets\ShaderProgram.h", line: 225:
+invalid operation
+An OpenGL error occured at file: "C:\Users\Jonny0815\source\repos\CGA218CMake\src\Framework\Assets\ShaderProgram.h", line: 225:
+invalid operation
+An OpenGL error occured at file: "C:\Users\Jonny0815\source\repos\CGA218CMake\src\Framework\Assets\ShaderProgram.h", line: 225:
+invalid operation
+An OpenGL error occured at file: "C:\Users\Jonny0815\source\repos\CGA218CMake\src\Framework\Assets\ShaderProgram.h", line: 225:
+invalid operation
+An OpenGL error occured at file: "C:\Users\Jonny0815\source\repos\CGA218CMake\src\Framework\Assets\ShaderProgram.h", line: 225:
+invalid operation

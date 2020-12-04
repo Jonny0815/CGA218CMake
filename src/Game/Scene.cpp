@@ -10,8 +10,9 @@ Scene::~Scene()
 {}
 
 
-Renderable renderable; 
+vector<Renderable> renderables; 
 vector<Mesh> meshesFromObj;
+vector<Mesh> meshesFromObj2;
 bool Scene::init()
 {
 	try
@@ -20,18 +21,56 @@ bool Scene::init()
 		m_assets.addShaderProgram("shader", AssetManager::createShaderProgram("assets/shaders/vertex.glsl", "assets/shaders/fragment.glsl"));
 		m_shader = m_assets.getShaderProgram("shader");
 
-		OBJResult obRes = OBJLoader::loadOBJ("assets/models/sphere.obj",false,false);
+		
+
+		OBJResult obRes2 = OBJLoader::loadOBJ("assets/models/ground.obj", false, false);
+
+		for (size_t i = 0; i < obRes2.objects[0].meshes.size(); i++) {
+			OBJMesh m = obRes2.objects[0].meshes[i];
+			OBJLoader::reverseWinding(m);
+			vector<VertexAttribute> va = m.atts;
+			vector<Vertex> v = m.vertices;
+			vector<Index> ind = m.indices;
+			Mesh me(v, va, ind);
+			meshesFromObj2.push_back(me);
+		}
+		renderables.push_back(Renderable(meshesFromObj2));
+
+		OBJResult obRes = OBJLoader::loadOBJ("assets/models/sphere.obj", false, false);
 		for (size_t i = 0; i < obRes.objects[0].meshes.size(); i++) {
 			OBJMesh m = obRes.objects[0].meshes[i];
-			vector<VertexAttribute> va = m.atts; 
-			vector<Vertex> v = m.vertices; 
-			vector<Index> ind = m.indices; 
+			OBJLoader::reverseWinding(m);
+			vector<VertexAttribute> va = m.atts;
+			vector<Vertex> v = m.vertices;
+			vector<Index> ind = m.indices;
 			Mesh me(v, va, ind);
 			meshesFromObj.push_back(me);
 		}
-		renderable = Renderable(meshesFromObj); 
+		renderables.push_back(Renderable(meshesFromObj));
+		renderables.push_back(Renderable(meshesFromObj));
+		renderables.push_back(Renderable(meshesFromObj));
+		renderables.push_back(Renderable(meshesFromObj));
+		
+
+		renderables[0].setScale(glm::vec3(0.01, 0.01, 0.01));
+		vec3 angles(270, 0, 0);
+		renderables[0].rotate(glm::quat(angles));
+		renderables[0].setPosition(glm::vec3(0.0, -0.9, -0.5));
+		renderables[1].setScale(glm::vec3(0.5, 0.4, 0.3));
+		renderables[2].setScale(glm::vec3(0.3, 0.4, 0.2));
+		renderables[2].setPosition(glm::vec3(0.8, 0.7, 0));
+		renderables[3].setScale(glm::vec3(0.2, 0.3, 0.4));
+		renderables[3].setPosition(glm::vec3(-0.8, 0.7, 0));
+		renderables[4].setPosition(glm::vec3(-0.7, 0.8, 0.0));
+
+		renderables[2].setParent(&renderables[1]);
+		renderables[3].setParent(&renderables[1]);
+		renderables[4].setParent(&renderables[3]);
 
 		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+
+		glEnable(GL_DEPTH_TEST);
+		glDepthFunc(GL_LESS);
 
         std::cout << "Scene initialization done\n";
 		glEnable(GL_CULL_FACE); 
@@ -52,13 +91,54 @@ void Scene::shutdown()
 
 void Scene::render(float dt)
 {
-	renderable.render(m_shader, dt); 
+
+	glClear(GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT);
+
+	for (size_t i = 0; i < renderables.size(); i++)
+	{
+		renderables[i].render(m_shader, dt);
+	}
 
 }
 
 void Scene::update(float dt)
 {
+	if (m_window->getInput().getKeyState(Key::S) == KeyState::Pressed)
+	{
+		renderables[1].translateLocal(vec3(0, -dt, 0));
+	}
+	if (m_window->getInput().getKeyState(Key::A) == KeyState::Pressed)
+	{
+		renderables[1].translateLocal(vec3(-dt, 0, 0));
+	}
+	if (m_window->getInput().getKeyState(Key::W) == KeyState::Pressed)
+	{
+		renderables[1].translateLocal(vec3(0, dt, 0));
+	}
+	if (m_window->getInput().getKeyState(Key::D) == KeyState::Pressed)
+	{
+		renderables[1].translateLocal(vec3(dt, 0, 0));
+	}
 
+	if (m_window->getInput().getKeyState(Key::E) == KeyState::Pressed)
+	{
+		vec3 angles(dt, 0, 0);
+		renderables[1].rotate(angles);
+	}
+	if (m_window->getInput().getKeyState(Key::Q) == KeyState::Pressed)
+	{
+		vec3 angles(-dt, 0, 0);
+		renderables[1].rotate(angles);
+	}
+
+	if (m_window->getInput().getKeyState(Key::R) == KeyState::Pressed)
+	{
+		renderables[1].scale(vec3(1+dt,1+dt,1+dt));
+	}
+	if (m_window->getInput().getKeyState(Key::F) == KeyState::Pressed)
+	{
+		renderables[1].scale(vec3(1-dt, 1-dt, 1-dt));
+	}
 }
 
 GameWindow * Scene::getWindow()
@@ -68,7 +148,7 @@ GameWindow * Scene::getWindow()
 
 void Scene::onKey(Key key, Action action, Modifier modifier)
 {
-
+	
 }
 
 void Scene::onMouseMove(MousePosition mouseposition)

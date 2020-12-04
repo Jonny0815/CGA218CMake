@@ -10,6 +10,12 @@ public:
 	void addMesh(Mesh);
 	void addMeshes(vector<Mesh>);
 	void render(ShaderProgram*, float);
+
+	
+
 private:
 	vector<Mesh> meshList;
+
+	
+
 };

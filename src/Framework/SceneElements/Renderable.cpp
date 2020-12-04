@@ -17,8 +17,22 @@ void Renderable::addMeshes(vector<Mesh> meshes) {
 
 void Renderable::render(ShaderProgram *shader, float dt) {
 
+	shader->use();
+	shader->setUniform("dt", dt);
+
+	glm::mat4 parentMat(1.0);
+	Transform* akt = this;
+	while (akt->getParent() != nullptr)
+	{
+		akt = akt->getParent();
+		parentMat = akt->getTransformMatrix() * parentMat;
+	}
+
+	shader->setUniform("tmat", parentMat*getTransformMatrix(), false);
+
 	for (size_t i = 0; i < meshList.size(); i++) {
-		meshList[i].render(shader, dt, getTransformMatrix()); 
+		
+		meshList[i].render(); 
 	}
 
 }

@@ -15,9 +15,12 @@ private:
 	glm::vec3 m_yaxis;
 	glm::vec3 m_zaxis;
 
-	Transform* m_parent;
+	
 
 	void updateTransformMatrix();
+
+
+	Transform* m_parent = nullptr;
 
 public:
 	Transform();

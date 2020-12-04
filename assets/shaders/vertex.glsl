@@ -9,7 +9,7 @@ uniform float dt;
 
 void main(){
     
-    int t = int (dt%3);
+    int t = int (dt*1000);
 
     if (t<1){
     colorVS = colorRGB;
