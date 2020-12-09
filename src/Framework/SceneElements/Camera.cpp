@@ -1,0 +1,32 @@
+#include "Camera.h"
+
+Camera::Camera(int h_with, int h_height, float h_angle, float h_nearClippingPlane, float h_farClippingPlane)
+{
+	m_with = h_with;
+	m_height = h_height;
+	m_angle = h_angle;
+	m_nearClippingPlane = h_nearClippingPlane;
+	m_farClippingPlane = m_farClippingPlane;
+}
+
+glm::mat4 Camera::getViewMatrix()
+{
+	return glm::lookAt(getPosition(), getDirection(), getYAxis());
+}
+
+glm::mat4 Camera::getProjectionMatrix()
+{
+	float aspect = m_with / m_height;
+	return glm::perspective(m_angle, aspect, m_nearClippingPlane, m_farClippingPlane);
+}
+
+void Camera::bind(ShaderProgram* h_shader)
+{
+	m_shader = h_shader;
+}
+
+void Camera::render()
+{
+	m_shader->setUniform("view", getViewMatrix(), false);
+	m_shader->setUniform("projection", getProjectionMatrix(), false);
+}

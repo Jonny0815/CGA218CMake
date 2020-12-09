@@ -56,3 +56,8 @@
 883	1034	628789384	CGA218.exe	77d3bc4e4ce9aae
 5	850	628789399	CMakeFiles/CGA218.dir/src/Game/Scene.cpp.obj	cf4beba6d42f8831
 851	995	628789399	CGA218.exe	77d3bc4e4ce9aae
+2	804	629226537	build.ninja	3bb886fc7b3849c3
+9	1130	629226538	CMakeFiles/CGA218.dir/src/Framework/SceneElements/Camera.cpp.obj	c32de5bc92379d95
+1131	1562	629226539	CGA218.exe	99ee79b144bba49
+7	1014	629227010	CMakeFiles/CGA218.dir/src/Framework/SceneElements/Renderable.cpp.obj	5baee09b7d2ca6fc
+1014	1206	629227010	CGA218.exe	99ee79b144bba49

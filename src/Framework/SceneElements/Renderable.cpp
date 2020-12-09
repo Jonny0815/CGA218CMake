@@ -28,7 +28,7 @@ void Renderable::render(ShaderProgram *shader, float dt) {
 		parentMat = akt->getTransformMatrix() * parentMat;
 	}
 
-	shader->setUniform("tmat", parentMat*getTransformMatrix(), false);
+	shader->setUniform("model", parentMat*getTransformMatrix(), false);
 
 	for (size_t i = 0; i < meshList.size(); i++) {
 		
