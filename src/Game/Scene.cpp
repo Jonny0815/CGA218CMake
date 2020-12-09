@@ -1,18 +1,27 @@
 #include "Scene.h"
+
 using namespace glm;
 Scene::Scene(GameWindow * window) :
 	m_window(window)
 {
 	assert(window != nullptr);
+
+	m_cam = new Camera(m_window->getWindowWidth(), m_window->getWindowHeight(), 45.0, 0.1, 10.0);
+
 }
 
 Scene::~Scene()
-{}
+{
+	delete m_cam;
+}
 
 
-vector<Renderable> renderables; 
+vector<Renderable> renderables;
 vector<Mesh> meshesFromObj;
 vector<Mesh> meshesFromObj2;
+
+
+
 bool Scene::init()
 {
 	try
@@ -53,7 +62,7 @@ bool Scene::init()
 		
 
 		renderables[0].setScale(glm::vec3(0.01, 0.01, 0.01));
-		vec3 angles(270, 0, 0);
+		vec3 angles(90, 0, 0);
 		renderables[0].rotate(glm::quat(angles));
 		renderables[0].setPosition(glm::vec3(0.0, -0.9, -0.5));
 		renderables[1].setScale(glm::vec3(0.5, 0.4, 0.3));
@@ -67,6 +76,9 @@ bool Scene::init()
 		renderables[3].setParent(&renderables[1]);
 		renderables[4].setParent(&renderables[3]);
 
+
+		m_cam->translate(vec3(0.0, 0.0, -2.0));
+		m_cam->bind(m_shader);
 		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
 		glEnable(GL_DEPTH_TEST);
@@ -94,6 +106,8 @@ void Scene::render(float dt)
 
 	glClear(GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT);
 
+	m_cam->render();
+
 	for (size_t i = 0; i < renderables.size(); i++)
 	{
 		renderables[i].render(m_shader, dt);
@@ -105,19 +119,28 @@ void Scene::update(float dt)
 {
 	if (m_window->getInput().getKeyState(Key::S) == KeyState::Pressed)
 	{
-		renderables[1].translateLocal(vec3(0, -dt, 0));
+		renderables[1].translate(vec3(0, -dt, 0));
 	}
 	if (m_window->getInput().getKeyState(Key::A) == KeyState::Pressed)
 	{
-		renderables[1].translateLocal(vec3(-dt, 0, 0));
+		renderables[1].translate(vec3(-dt, 0, 0));
 	}
 	if (m_window->getInput().getKeyState(Key::W) == KeyState::Pressed)
 	{
-		renderables[1].translateLocal(vec3(0, dt, 0));
+		renderables[1].translate(vec3(0, dt, 0));
 	}
 	if (m_window->getInput().getKeyState(Key::D) == KeyState::Pressed)
 	{
-		renderables[1].translateLocal(vec3(dt, 0, 0));
+		renderables[1].translate(vec3(dt, 0, 0));
+	}
+
+	if (m_window->getInput().getKeyState(Key::LeftCtrl) == KeyState::Pressed)
+	{
+		renderables[1].translate(vec3(0, 0, -dt));
+	}
+	if (m_window->getInput().getKeyState(Key::LeftShift) == KeyState::Pressed)
+	{
+		renderables[1].translate(vec3(0, 0, dt));
 	}
 
 	if (m_window->getInput().getKeyState(Key::E) == KeyState::Pressed)
@@ -139,6 +162,34 @@ void Scene::update(float dt)
 	{
 		renderables[1].scale(vec3(1-dt, 1-dt, 1-dt));
 	}
+
+	if (m_window->getInput().getKeyState(Key::Up) == KeyState::Pressed)
+	{
+		m_cam->translate(vec3(0.0, dt, 0.0));
+	}
+	if (m_window->getInput().getKeyState(Key::Down) == KeyState::Pressed)
+	{
+		m_cam->translate(vec3(0.0, -dt, 0.0));
+	}
+
+	if (m_window->getInput().getKeyState(Key::Right) == KeyState::Pressed)
+	{
+		m_cam->translate(vec3(dt, 0.0, 0.0));
+	}
+	if (m_window->getInput().getKeyState(Key::Left) == KeyState::Pressed)
+	{
+		m_cam->translate(vec3(-dt, 0.0, 0.0));
+	}
+
+	if (m_window->getInput().getKeyState(Key::PageUp) == KeyState::Pressed)
+	{
+		m_cam->translate(vec3(0.0, 0.0, dt));
+	}
+	if (m_window->getInput().getKeyState(Key::PageDown) == KeyState::Pressed)
+	{
+		m_cam->translate(vec3(0.0, 0.0, -dt));
+	}
+
 }
 
 GameWindow * Scene::getWindow()

@@ -8,6 +8,7 @@
 #include <Mesh.h>
 #include <Renderable.h>
 #include <OBJLoader.h>
+#include "Camera.h"
 
 class Scene
 {
@@ -28,6 +29,7 @@ public:
 	void onFrameBufferResize(int width, int height);
 
 private:
+	Camera* m_cam;
 	GameWindow* m_window;
 	AssetManager m_assets;
     ShaderProgram* m_shader;
