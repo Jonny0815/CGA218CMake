@@ -36,7 +36,6 @@ bool Scene::init()
 
 		for (size_t i = 0; i < obRes2.objects[0].meshes.size(); i++) {
 			OBJMesh m = obRes2.objects[0].meshes[i];
-			OBJLoader::reverseWinding(m);
 			vector<VertexAttribute> va = m.atts;
 			vector<Vertex> v = m.vertices;
 			vector<Index> ind = m.indices;
@@ -48,7 +47,6 @@ bool Scene::init()
 		OBJResult obRes = OBJLoader::loadOBJ("assets/models/sphere.obj", false, false);
 		for (size_t i = 0; i < obRes.objects[0].meshes.size(); i++) {
 			OBJMesh m = obRes.objects[0].meshes[i];
-			OBJLoader::reverseWinding(m);
 			vector<VertexAttribute> va = m.atts;
 			vector<Vertex> v = m.vertices;
 			vector<Index> ind = m.indices;
@@ -59,10 +57,10 @@ bool Scene::init()
 		renderables.push_back(Renderable(meshesFromObj));
 		renderables.push_back(Renderable(meshesFromObj));
 		renderables.push_back(Renderable(meshesFromObj));
-		
+		renderables.push_back(Renderable(meshesFromObj));
 
 		renderables[0].setScale(glm::vec3(0.01, 0.01, 0.01));
-		vec3 angles(90, 0, 0);
+		vec3 angles(270, 0, 0);
 		renderables[0].rotate(glm::quat(angles));
 		renderables[0].setPosition(glm::vec3(0.0, -0.9, -0.5));
 		renderables[1].setScale(glm::vec3(0.5, 0.4, 0.3));
@@ -76,9 +74,14 @@ bool Scene::init()
 		renderables[3].setParent(&renderables[1]);
 		renderables[4].setParent(&renderables[3]);
 
+		renderables[5].setScale(glm::vec3(0.1, 0.3, 0.2));
+		renderables[5].setPosition(glm::vec3(0.5, 0.2, 2));
 
 		m_cam->translate(vec3(0.0, 0.0, -2.0));
 		m_cam->bind(m_shader);
+
+		m_cam->setParent(&renderables[1]);
+
 		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
 		glEnable(GL_DEPTH_TEST);
@@ -117,6 +120,9 @@ void Scene::render(float dt)
 
 void Scene::update(float dt)
 {
+
+	//move balls
+
 	if (m_window->getInput().getKeyState(Key::S) == KeyState::Pressed)
 	{
 		renderables[1].translate(vec3(0, -dt, 0));
@@ -143,6 +149,8 @@ void Scene::update(float dt)
 		renderables[1].translate(vec3(0, 0, dt));
 	}
 
+	//rotate balls
+
 	if (m_window->getInput().getKeyState(Key::E) == KeyState::Pressed)
 	{
 		vec3 angles(dt, 0, 0);
@@ -154,6 +162,8 @@ void Scene::update(float dt)
 		renderables[1].rotate(angles);
 	}
 
+	//scale balls
+
 	if (m_window->getInput().getKeyState(Key::R) == KeyState::Pressed)
 	{
 		renderables[1].scale(vec3(1+dt,1+dt,1+dt));
@@ -162,6 +172,9 @@ void Scene::update(float dt)
 	{
 		renderables[1].scale(vec3(1-dt, 1-dt, 1-dt));
 	}
+
+
+	//move cam
 
 	if (m_window->getInput().getKeyState(Key::Up) == KeyState::Pressed)
 	{
@@ -174,11 +187,11 @@ void Scene::update(float dt)
 
 	if (m_window->getInput().getKeyState(Key::Right) == KeyState::Pressed)
 	{
-		m_cam->translate(vec3(dt, 0.0, 0.0));
+		m_cam->translate(vec3(-dt, 0.0, 0.0));
 	}
 	if (m_window->getInput().getKeyState(Key::Left) == KeyState::Pressed)
 	{
-		m_cam->translate(vec3(-dt, 0.0, 0.0));
+		m_cam->translate(vec3(dt, 0.0, 0.0));
 	}
 
 	if (m_window->getInput().getKeyState(Key::PageUp) == KeyState::Pressed)
@@ -188,6 +201,41 @@ void Scene::update(float dt)
 	if (m_window->getInput().getKeyState(Key::PageDown) == KeyState::Pressed)
 	{
 		m_cam->translate(vec3(0.0, 0.0, -dt));
+	}
+
+	//rotate cam
+
+	if (m_window->getInput().getKeyState(Key::NumPad2) == KeyState::Pressed)
+	{
+		vec3 angles(-dt, 0, 0);
+		m_cam->rotate(angles);
+	}
+	if (m_window->getInput().getKeyState(Key::NumPad8) == KeyState::Pressed)
+	{
+		vec3 angles(dt, 0, 0);
+		m_cam->rotate(angles);
+	}
+
+	if (m_window->getInput().getKeyState(Key::NumPad4) == KeyState::Pressed)
+	{
+		vec3 angles(0, -dt, 0);
+		m_cam->rotate(angles);
+	}
+	if (m_window->getInput().getKeyState(Key::NumPad6) == KeyState::Pressed)
+	{
+		vec3 angles(0, dt, 0);
+		m_cam->rotate(angles);
+	}
+
+	if (m_window->getInput().getKeyState(Key::NumPad7) == KeyState::Pressed)
+	{
+		vec3 angles(0, 0, -dt);
+		m_cam->rotate(angles);
+	}
+	if (m_window->getInput().getKeyState(Key::NumPad9) == KeyState::Pressed)
+	{
+		vec3 angles(0, 0, dt);
+		m_cam->rotate(angles);
 	}
 
 }

@@ -11,7 +11,21 @@ Camera::Camera(int h_with, int h_height, float h_angle, float h_nearClippingPlan
 
 glm::mat4 Camera::getViewMatrix()
 {
-	return glm::lookAt(getPosition(), getDirection(), getYAxis());
+	glm::vec3 position;
+	glm::vec3 lookatpos;
+
+	if (getParent() != nullptr)
+	{
+		position = getParent()->getPosition() + getPosition();
+		lookatpos = getParent()->getPosition();
+	}
+	else {
+
+		position = getPosition();
+		lookatpos = getPosition() - getDirection();
+	}
+
+	return glm::lookAt(position, lookatpos, getYAxis());
 }
 
 glm::mat4 Camera::getProjectionMatrix()
@@ -29,4 +43,5 @@ void Camera::render()
 {
 	m_shader->setUniform("view", getViewMatrix(), false);
 	m_shader->setUniform("projection", getProjectionMatrix(), false);
+
 }
