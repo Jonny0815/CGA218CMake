@@ -6,13 +6,14 @@ Scene::Scene(GameWindow * window) :
 {
 	assert(window != nullptr);
 
-	m_cam = new Camera(m_window->getWindowWidth(), m_window->getWindowHeight(), 45.0, 0.1, 10.0);
-
+	m_cam2 = new FreeCamera(m_window->getWindowWidth(), m_window->getWindowHeight(), 45.0, 0.1, 10.0);
+	m_cam = new ThirdPersonCamera(m_window->getWindowWidth(), m_window->getWindowHeight(), 45.0, 0.1, 10.0);
 }
 
 Scene::~Scene()
 {
 	delete m_cam;
+	delete m_cam2;
 }
 
 
@@ -109,6 +110,16 @@ void Scene::render(float dt)
 
 	glClear(GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT);
 
+	if (changeCamera)
+	{
+		Camera* tmp;
+		tmp = m_cam;
+		m_cam = m_cam2;
+		m_cam2 = tmp;
+		changeCamera = false;
+	}
+
+
 	m_cam->render();
 
 	for (size_t i = 0; i < renderables.size(); i++)
@@ -153,12 +164,12 @@ void Scene::update(float dt)
 
 	if (m_window->getInput().getKeyState(Key::E) == KeyState::Pressed)
 	{
-		vec3 angles(dt, 0, 0);
+		vec3 angles(0, dt, 0);
 		renderables[1].rotate(angles);
 	}
 	if (m_window->getInput().getKeyState(Key::Q) == KeyState::Pressed)
 	{
-		vec3 angles(-dt, 0, 0);
+		vec3 angles(0, -dt, 0);
 		renderables[1].rotate(angles);
 	}
 
@@ -247,7 +258,10 @@ GameWindow * Scene::getWindow()
 
 void Scene::onKey(Key key, Action action, Modifier modifier)
 {
-	
+	if (key == Key::Space)
+	{
+		changeCamera = true;
+	}
 }
 
 void Scene::onMouseMove(MousePosition mouseposition)

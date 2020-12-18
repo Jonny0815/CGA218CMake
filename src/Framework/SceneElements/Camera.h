@@ -13,15 +13,15 @@ public:
 	void bind(ShaderProgram* h_shader);
 	void render();
 
-private:
-	glm::mat4 getViewMatrix();
+protected:
+	virtual glm::mat4 getViewMatrix();
 	glm::mat4 getProjectionMatrix();
 
 	int m_with = 0;
 	int m_height = 0;
 	float m_angle = 0.0;
 	float m_nearClippingPlane = 0.0;
-	float m_farClippingPlane;
+	float m_farClippingPlane = 0.0;
 	
-	ShaderProgram* m_shader;
+	ShaderProgram* m_shader = nullptr;
 };

@@ -6,26 +6,32 @@ Camera::Camera(int h_with, int h_height, float h_angle, float h_nearClippingPlan
 	m_height = h_height;
 	m_angle = h_angle;
 	m_nearClippingPlane = h_nearClippingPlane;
-	m_farClippingPlane = m_farClippingPlane;
+	m_farClippingPlane = h_farClippingPlane;
+	m_shader = nullptr;
 }
+
+//glm::mat4 Camera::getViewMatrix()
+//{
+//	glm::vec3 position;
+//	glm::vec3 lookatpos;
+//
+//	if (getParent() != nullptr)
+//	{
+//		position = getParent()->getPosition() + getPosition();
+//		lookatpos = getParent()->getPosition();
+//	}
+//	else {
+//
+//		position = getPosition();
+//		lookatpos = getPosition() - getDirection();
+//	}
+//
+//	return glm::lookAt(position, lookatpos, getYAxis());
+//}
 
 glm::mat4 Camera::getViewMatrix()
 {
-	glm::vec3 position;
-	glm::vec3 lookatpos;
-
-	if (getParent() != nullptr)
-	{
-		position = getParent()->getPosition() + getPosition();
-		lookatpos = getParent()->getPosition();
-	}
-	else {
-
-		position = getPosition();
-		lookatpos = getPosition() - getDirection();
-	}
-
-	return glm::lookAt(position, lookatpos, getYAxis());
+	return glm::mat4();
 }
 
 glm::mat4 Camera::getProjectionMatrix()

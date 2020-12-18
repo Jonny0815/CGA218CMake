@@ -8,7 +8,8 @@
 #include <Mesh.h>
 #include <Renderable.h>
 #include <OBJLoader.h>
-#include "Camera.h"
+#include "FreeCamera.h"
+#include "ThirdPersonCamera.h"
 
 class Scene
 {
@@ -30,6 +31,8 @@ public:
 
 private:
 	Camera* m_cam;
+	Camera* m_cam2;
+	bool changeCamera = false;
 	GameWindow* m_window;
 	AssetManager m_assets;
     ShaderProgram* m_shader;
