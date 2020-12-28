@@ -1,19 +1,21 @@
 #include "Scene.h"
 
 using namespace glm;
-Scene::Scene(GameWindow * window) :
+Scene::Scene(GameWindow* window) :
 	m_window(window)
 {
 	assert(window != nullptr);
 
-	m_cam2 = new FreeCamera(m_window->getWindowWidth(), m_window->getWindowHeight(), 45.0, 0.1, 10.0);
-	m_cam = new ThirdPersonCamera(m_window->getWindowWidth(), m_window->getWindowHeight(), 45.0, 0.1, 10.0);
+	mv_cameras.push_back(new FreeCamera(m_window->getWindowWidth(), m_window->getWindowHeight(), 45.0, 0.1, 10.0));
+	mv_cameras.push_back(new ThirdPersonCamera(m_window->getWindowWidth(), m_window->getWindowHeight(), 45.0, 0.1, 10.0));
 }
 
 Scene::~Scene()
 {
-	delete m_cam;
-	delete m_cam2;
+	for (size_t i = 0; i < mv_cameras.size(); i++)
+	{
+		delete mv_cameras[i];
+	}
 }
 
 
@@ -78,10 +80,11 @@ bool Scene::init()
 		renderables[5].setScale(glm::vec3(0.1, 0.3, 0.2));
 		renderables[5].setPosition(glm::vec3(0.5, 0.2, 2));
 
-		m_cam->translate(vec3(0.0, 0.0, -2.0));
-		m_cam->bind(m_shader);
+		mv_cameras[0]->translate(vec3(0.0, 0.0, -2.0));
+		mv_cameras[0]->bind(m_shader);
+		mv_cameras[1]->bind(m_shader);
 
-		m_cam->setParent(&renderables[1]);
+		mv_cameras[1]->setParent(&renderables[1]);
 
 		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
@@ -112,15 +115,20 @@ void Scene::render(float dt)
 
 	if (changeCamera)
 	{
-		Camera* tmp;
-		tmp = m_cam;
-		m_cam = m_cam2;
-		m_cam2 = tmp;
+		if (useCamera == 0)
+		{
+			useCamera = 1;
+		}
+		else
+		{
+			useCamera = 0;
+		}
+
 		changeCamera = false;
 	}
 
 
-	m_cam->render();
+	mv_cameras[useCamera]->render();
 
 	for (size_t i = 0; i < renderables.size(); i++)
 	{
@@ -189,29 +197,29 @@ void Scene::update(float dt)
 
 	if (m_window->getInput().getKeyState(Key::Up) == KeyState::Pressed)
 	{
-		m_cam->translate(vec3(0.0, dt, 0.0));
+		mv_cameras[useCamera]->translate(vec3(0.0, dt, 0.0));
 	}
 	if (m_window->getInput().getKeyState(Key::Down) == KeyState::Pressed)
 	{
-		m_cam->translate(vec3(0.0, -dt, 0.0));
+		mv_cameras[useCamera]->translate(vec3(0.0, -dt, 0.0));
 	}
 
 	if (m_window->getInput().getKeyState(Key::Right) == KeyState::Pressed)
 	{
-		m_cam->translate(vec3(-dt, 0.0, 0.0));
+		mv_cameras[useCamera]->translate(vec3(-dt, 0.0, 0.0));
 	}
 	if (m_window->getInput().getKeyState(Key::Left) == KeyState::Pressed)
 	{
-		m_cam->translate(vec3(dt, 0.0, 0.0));
+		mv_cameras[useCamera]->translate(vec3(dt, 0.0, 0.0));
 	}
 
 	if (m_window->getInput().getKeyState(Key::PageUp) == KeyState::Pressed)
 	{
-		m_cam->translate(vec3(0.0, 0.0, dt));
+		mv_cameras[useCamera]->translate(vec3(0.0, 0.0, dt));
 	}
 	if (m_window->getInput().getKeyState(Key::PageDown) == KeyState::Pressed)
 	{
-		m_cam->translate(vec3(0.0, 0.0, -dt));
+		mv_cameras[useCamera]->translate(vec3(0.0, 0.0, -dt));
 	}
 
 	//rotate cam
@@ -219,34 +227,34 @@ void Scene::update(float dt)
 	if (m_window->getInput().getKeyState(Key::NumPad2) == KeyState::Pressed)
 	{
 		vec3 angles(-dt, 0, 0);
-		m_cam->rotate(angles);
+		mv_cameras[useCamera]->rotate(angles);
 	}
 	if (m_window->getInput().getKeyState(Key::NumPad8) == KeyState::Pressed)
 	{
 		vec3 angles(dt, 0, 0);
-		m_cam->rotate(angles);
+		mv_cameras[useCamera]->rotate(angles);
 	}
 
 	if (m_window->getInput().getKeyState(Key::NumPad4) == KeyState::Pressed)
 	{
 		vec3 angles(0, -dt, 0);
-		m_cam->rotate(angles);
+		mv_cameras[useCamera]->rotate(angles);
 	}
 	if (m_window->getInput().getKeyState(Key::NumPad6) == KeyState::Pressed)
 	{
 		vec3 angles(0, dt, 0);
-		m_cam->rotate(angles);
+		mv_cameras[useCamera]->rotate(angles);
 	}
 
 	if (m_window->getInput().getKeyState(Key::NumPad7) == KeyState::Pressed)
 	{
 		vec3 angles(0, 0, -dt);
-		m_cam->rotate(angles);
+		mv_cameras[useCamera]->rotate(angles);
 	}
 	if (m_window->getInput().getKeyState(Key::NumPad9) == KeyState::Pressed)
 	{
 		vec3 angles(0, 0, dt);
-		m_cam->rotate(angles);
+		mv_cameras[useCamera]->rotate(angles);
 	}
 
 }
@@ -258,7 +266,7 @@ GameWindow * Scene::getWindow()
 
 void Scene::onKey(Key key, Action action, Modifier modifier)
 {
-	if (key == Key::Space)
+	if (key == Key::Space && action == Action::Down)
 	{
 		changeCamera = true;
 	}

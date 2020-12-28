@@ -30,8 +30,8 @@ public:
 	void onFrameBufferResize(int width, int height);
 
 private:
-	Camera* m_cam;
-	Camera* m_cam2;
+	vector<Camera*> mv_cameras;
+	int useCamera = 0;
 	bool changeCamera = false;
 	GameWindow* m_window;
 	AssetManager m_assets;
