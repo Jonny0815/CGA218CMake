@@ -9,10 +9,11 @@ uniform float dt;
 uniform mat4 model;
 uniform mat4 view;
 uniform mat4 projection;
+uniform vec3 ambientlight;
 
 void main(){
     
-    colorVS = colorRGB;
+    colorVS = colorRGB * ambientlight;
     
     gl_Position = projection * view * model * vec4(pos.x, pos.y, pos.z, 1.0);
 

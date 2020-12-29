@@ -13,7 +13,7 @@ glm::mat4 ThirdPersonCamera::getViewMatrix()
 
 	if (getParent() != nullptr)
 	{
-		position = getParent()->getPosition() - glm::vec3(1.5,1.5,1.5) * getParent()->getZAxis() + glm::vec3(1.3,1.3,1.3) * getYAxis();
+		position = getParent()->getPosition() - glm::vec3(4,4,4) * getParent()->getZAxis() + glm::vec3(1.3,1.3,1.3) * getYAxis();
 
 		lookatpos = getParent()->getPosition();
 	}

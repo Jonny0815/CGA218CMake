@@ -10,6 +10,15 @@ Mesh::Mesh(vector<Vertex> vertecies, vector<VertexAttribute> attributes, vector<
 		_indicies = index; 
 		setup(); 
 }
+Mesh::Mesh(vector<Vertex> vertecies, vector<VertexAttribute> attributes, vector<Index> index, glm::vec3 diffColor, float shine)
+{
+	_vertecies = vertecies;
+	_attributes = attributes;
+	_indicies = index;
+	_diffcolor = diffColor;
+	_shine = shine;
+	setup();
+}
 //todo: render shadder mitgeben
 void Mesh::render() {
 		
@@ -18,7 +27,17 @@ void Mesh::render() {
 		glDrawElements(GL_TRIANGLES, _indicies.size(), GL_UNSIGNED_INT, 0);
 		glBindVertexArray(0);
 }
-	
+
+void Mesh::render(ShaderProgram* shader)
+{
+
+
+
+	glBindVertexArray(VAO); // seeing as we only have a single VAO there's no need to bind it every time, but we'll do so to keep things a bit more organized
+	glDrawElements(GL_TRIANGLES, _indicies.size(), GL_UNSIGNED_INT, 0);
+	glBindVertexArray(0);
+}
+
 	
 void Mesh::setup() {
 			glGenVertexArrays(1, &VAO);

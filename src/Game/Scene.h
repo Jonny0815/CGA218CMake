@@ -10,6 +10,7 @@
 #include <OBJLoader.h>
 #include "FreeCamera.h"
 #include "ThirdPersonCamera.h"
+#include "PointLight.h"
 
 class Scene
 {
@@ -22,6 +23,8 @@ public:
 	void render(float dt);
 	void update(float dt);
 	GameWindow* getWindow();
+
+	
 
 	void onKey(Key key, Action action, Modifier modifier);
 	void onMouseMove(MousePosition mouseposition);
@@ -37,6 +40,13 @@ private:
 	AssetManager m_assets;
     ShaderProgram* m_shader;
     GLuint vaoID, vboID;
+
+	glm::vec3 ambientLight{ 1,1,1 };
+
+	vector<Renderable> renderables;
+	vector<PointLight> pointLights;
+
+	void loadOBJtoRenderables(string);
 
 };
 
