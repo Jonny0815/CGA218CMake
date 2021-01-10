@@ -32,7 +32,7 @@ void Renderable::render(ShaderProgram *shader, float dt) {
 
 	for (size_t i = 0; i < meshList.size(); i++) {
 		
-		meshList[i].render(); 
+		meshList[i].render(shader); 
 	}
 
 }

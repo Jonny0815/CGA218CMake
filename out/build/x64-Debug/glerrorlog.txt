@@ -18,3 +18,19 @@ An OpenGL error occured at file: "C:\Users\Jonny0815\source\repos\CGA218CMake\sr
 invalid operation
 An OpenGL error occured at file: "C:\Users\Jonny0815\source\repos\CGA218CMake\src\Framework\Assets\ShaderProgram.h", line: 225:
 invalid operation
+An OpenGL error occured at file: "C:\Users\Jonny0815\source\repos\CGA218CMake\src\Framework\Assets\ShaderProgram.h", line: 93:
+invalid operation
+An OpenGL error occured at file: "C:\Users\Jonny0815\source\repos\CGA218CMake\src\Framework\Assets\ShaderProgram.h", line: 93:
+invalid operation
+An OpenGL error occured at file: "C:\Users\Jonny0815\source\repos\CGA218CMake\src\Framework\Assets\ShaderProgram.h", line: 93:
+invalid operation
+An OpenGL error occured at file: "C:\Users\Jonny0815\source\repos\CGA218CMake\src\Framework\Assets\ShaderProgram.h", line: 93:
+invalid operation
+An OpenGL error occured at file: "C:\Users\Jonny0815\source\repos\CGA218CMake\src\Framework\Assets\ShaderProgram.h", line: 93:
+invalid operation
+An OpenGL error occured at file: "C:\Users\Jonny0815\source\repos\CGA218CMake\src\Framework\Assets\ShaderProgram.h", line: 93:
+invalid operation
+An OpenGL error occured at file: "C:\Users\Jonny0815\source\repos\CGA218CMake\src\Framework\Assets\ShaderProgram.h", line: 93:
+invalid operation
+An OpenGL error occured at file: "C:\Users\Jonny0815\source\repos\CGA218CMake\src\Framework\Assets\ShaderProgram.h", line: 93:
+invalid operation

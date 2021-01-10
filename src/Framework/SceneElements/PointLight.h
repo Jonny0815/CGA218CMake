@@ -4,7 +4,7 @@
 class PointLight : public Transform {
 public:
 
-	PointLight(std::string h_name, glm::vec3 h_color, glm::vec3 h_pos, glm::vec3 h_direction);
+	PointLight(std::string h_name, glm::vec3 h_color, glm::vec3 h_pos);
 
 	void bind(ShaderProgram* h_shader);
 	void render();

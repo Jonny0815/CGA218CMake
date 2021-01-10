@@ -41,12 +41,12 @@ private:
     ShaderProgram* m_shader;
     GLuint vaoID, vboID;
 
-	glm::vec3 ambientLight{ 1,1,1 };
+	glm::vec3 ambientLight{ 0.5,0.5,0.5 };
 
 	vector<Renderable> renderables;
 	vector<PointLight> pointLights;
 
-	void loadOBJtoRenderables(string);
+	void loadOBJtoRenderables(string path, glm::vec3 diffColor, glm::vec3 emisColor, glm::vec3 specColor, float shine);
 
 };
 

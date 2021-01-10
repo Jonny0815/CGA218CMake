@@ -33,14 +33,14 @@ bool Scene::init()
 		m_shader = m_assets.getShaderProgram("shader");
 
 		
-
 		
-		loadOBJtoRenderables("assets/models/ground.obj");
-		loadOBJtoRenderables("assets/models/HQ_Movie cycle_lookY.obj");
-		loadOBJtoRenderables("assets/models/sphere.obj");
-		loadOBJtoRenderables("assets/models/sphere.obj");
-		loadOBJtoRenderables("assets/models/sphere.obj");
-		loadOBJtoRenderables("assets/models/sphere.obj");
+		
+		loadOBJtoRenderables("assets/models/ground.obj",glm::vec3(0.8, 0.7, 0.6), glm::vec3(0.9, 0, 0), glm::vec3(1, 1, 0), 0.3);
+		loadOBJtoRenderables("assets/models/HQ_Movie cycle_lookY.obj", glm::vec3(0, 0.7, 0.6), glm::vec3(0.6, 0, 0.4), glm::vec3(1, 0, 1), 0.4);
+		loadOBJtoRenderables("assets/models/sphere.obj", glm::vec3(0.2, 0.7, 0.6), glm::vec3(0.6, 0.1, 0.1), glm::vec3(1,0,0), 0.2);
+		loadOBJtoRenderables("assets/models/sphere.obj", glm::vec3(0.2, 0.7, 0.6), glm::vec3(0.6, 0.1, 0.1), glm::vec3(1,0,0), 0.2);
+		loadOBJtoRenderables("assets/models/sphere.obj", glm::vec3(0.2, 0.7, 0.6), glm::vec3(0.6, 0.1, 0.1), glm::vec3(1,0,0), 0.2);
+		loadOBJtoRenderables("assets/models/sphere.obj", glm::vec3(0.2, 0.7, 0.6), glm::vec3(0.6, 0.1, 0.1), glm::vec3(1,0,0), 0.2);
 		
 
 		renderables[0].setScale(glm::vec3(0.10, 0.10, 0.10));
@@ -63,8 +63,9 @@ bool Scene::init()
 		renderables[5].setScale(glm::vec3(0.1, 0.3, 0.2));
 		renderables[5].setPosition(glm::vec3(0.5, 0.2, 2));
 
-		pointLights.push_back(PointLight("test", glm::vec3(1, 0, 0), glm::vec3(0, 0, 2), glm::vec3(0, 0, -1)));
-
+		pointLights.push_back(PointLight("test", glm::vec3(1, 1, 1), glm::vec3(1, 1, 1)));
+		pointLights[0].bind(m_shader);
+		pointLights[0].translate(glm::vec3(1, 1, 1));
 		pointLights[0].setParent(&renderables[1]);
 
 		mv_cameras[0]->translate(vec3(0.0, 0.0, -2.0));
@@ -115,7 +116,12 @@ void Scene::render(float dt)
 	}
 
 	
-	m_shader->setUniform("ambientlight", ambientLight);
+	m_shader->setUniform("lightColorAmbient", ambientLight);
+
+	for (size_t i = 0; i < pointLights.size(); i++)
+	{
+		pointLights[i].render();
+	}
 
 	mv_cameras[useCamera]->render();
 
@@ -124,10 +130,7 @@ void Scene::render(float dt)
 		renderables[i].render(m_shader, dt);
 	}
 
-	for (size_t i = 0; i < pointLights.size(); i++)
-	{
-		pointLights[i].render();
-	}
+	
 
 }
 
@@ -152,6 +155,24 @@ void Scene::update(float dt)
 	{
 		renderables[1].translate(vec3(-dt, 0, 0));
 	}
+
+	if (m_window->getInput().getKeyState(Key::K) == KeyState::Pressed)
+	{
+		pointLights[0].translate(vec3(0, -dt, 0));
+	}
+	if (m_window->getInput().getKeyState(Key::J) == KeyState::Pressed)
+	{
+		pointLights[0].translate(vec3(dt, 0, 0));
+	}
+	if (m_window->getInput().getKeyState(Key::I) == KeyState::Pressed)
+	{
+		pointLights[0].translate(vec3(0, dt, 0));
+	}
+	if (m_window->getInput().getKeyState(Key::L) == KeyState::Pressed)
+	{
+		pointLights[0].translate(vec3(-dt, 0, 0));
+	}
+
 
 	if (m_window->getInput().getKeyState(Key::LeftCtrl) == KeyState::Pressed)
 	{
@@ -286,7 +307,7 @@ void Scene::onFrameBufferResize(int width, int height)
 
 }
 
-void Scene::loadOBJtoRenderables(string path)
+void Scene::loadOBJtoRenderables(string path, glm::vec3 diffColor, glm::vec3 emisColor, glm::vec3 specColor, float shine)
 {
 	vector<Mesh> meshesFromObj;
 
@@ -296,7 +317,7 @@ void Scene::loadOBJtoRenderables(string path)
 		vector<VertexAttribute> va = m.atts;
 		vector<Vertex> v = m.vertices;
 		vector<Index> ind = m.indices;
-		Mesh me(v, va, ind);
+		Mesh me(v, va, ind, diffColor, emisColor, specColor, shine);
 		meshesFromObj.push_back(me);
 	}
 

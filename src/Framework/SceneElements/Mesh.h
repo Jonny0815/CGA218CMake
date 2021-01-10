@@ -9,9 +9,8 @@ using namespace std;
 class Mesh {
 public:
 	~Mesh();
-	Mesh();
-	Mesh(vector<Vertex> vertecies, vector<VertexAttribute> attributes, vector<Index> index);
-	Mesh(vector<Vertex> vertecies, vector<VertexAttribute> attributes, vector<Index> index, glm::vec3 diffColor, float shine);
+	//Mesh(vector<Vertex> vertecies, vector<VertexAttribute> attributes, vector<Index> index);
+	Mesh(vector<Vertex> vertecies, vector<VertexAttribute> attributes, vector<Index> index, glm::vec3 diffColor, glm::vec3 emisColor, glm::vec3 specColor, float shine);
 	void render();
 	void render(ShaderProgram* shader);
 	void setup();
@@ -21,7 +20,9 @@ private:
 	vector<Vertex> _vertecies;
 	vector<VertexAttribute> _attributes;
 	vector<Index> _indicies;
-	glm::vec3 _diffcolor;
-	float _shine;
+	glm::vec3 _matDiffuse;
+	glm::vec3 _matEmissive;
+	glm::vec3 _matSpecular;
+	float _shininess;
 };
 #endif
