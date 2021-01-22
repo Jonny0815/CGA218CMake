@@ -9,27 +9,19 @@
 //		_indicies = index; 
 //		setup(); 
 //}
-Mesh::Mesh(vector<Vertex> vertecies, vector<VertexAttribute> attributes, vector<Index> index, glm::vec3 diffColor, glm::vec3 emisColor, glm::vec3 specColor, float shine)
+Mesh::Mesh(vector<Vertex> vertecies, vector<VertexAttribute> attributes, vector<Index> index, Material mat)
 {
 	_vertecies = vertecies;
 	_attributes = attributes;
 	_indicies = index;
-	_matDiffuse = diffColor;
-	_matEmissive = emisColor;
-	_matSpecular = specColor;
-	_shininess = shine;
+	_material = mat;
 	setup();
 }
 
 
 void Mesh::render(ShaderProgram* shader)
 {
-
-	shader->use();
-	shader->setUniform("matDiffuse", _matDiffuse);
-	shader->setUniform("matEmissive", _matEmissive);
-	shader->setUniform("matSpecular", _matSpecular);
-
+	_material.render();
 	glBindVertexArray(VAO); // seeing as we only have a single VAO there's no need to bind it every time, but we'll do so to keep things a bit more organized
 	glDrawElements(GL_TRIANGLES, _indicies.size(), GL_UNSIGNED_INT, 0);
 	glBindVertexArray(0);

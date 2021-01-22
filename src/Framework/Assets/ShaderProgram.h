@@ -16,7 +16,7 @@ public:
 	~ShaderProgram();
 	void use();
 	GLuint prog;
-	GLuint currentTu;
+	GLuint currentTu = 0;
 
 	bool isActive()
 	{

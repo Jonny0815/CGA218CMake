@@ -46,7 +46,7 @@ private:
 	vector<Renderable> renderables;
 	vector<PointLight> pointLights;
 
-	void loadOBJtoRenderables(string path, glm::vec3 diffColor, glm::vec3 emisColor, glm::vec3 specColor, float shine);
+	void loadOBJtoRenderables(string path, Material mat);
 
 };
 

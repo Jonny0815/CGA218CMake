@@ -15,7 +15,6 @@ void PointLight::bind(ShaderProgram* h_shader)
 
 void PointLight::render()
 {
-	shader->use();
 	shader->setUniform("lightPos", getPosition());
 	shader->setUniform("lightColor", color);
 }

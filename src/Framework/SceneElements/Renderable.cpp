@@ -17,7 +17,7 @@ void Renderable::addMeshes(vector<Mesh> meshes) {
 
 void Renderable::render(ShaderProgram *shader, float dt) {
 
-	shader->use();
+	
 	shader->setUniform("dt", dt);
 
 	glm::mat4 parentMat(1.0);

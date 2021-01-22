@@ -35,13 +35,20 @@ bool Scene::init()
 		
 		
 		
-		loadOBJtoRenderables("assets/models/ground.obj",glm::vec3(0.8, 0.7, 0.6), glm::vec3(0.9, 0, 0), glm::vec3(1, 1, 0), 0.3);
-		loadOBJtoRenderables("assets/models/HQ_Movie cycle_lookY.obj", glm::vec3(0, 0.7, 0.6), glm::vec3(0.6, 0, 0.4), glm::vec3(1, 0, 1), 0.4);
-		loadOBJtoRenderables("assets/models/sphere.obj", glm::vec3(0.2, 0.7, 0.6), glm::vec3(0.6, 0.1, 0.1), glm::vec3(1,0,0), 0.2);
-		loadOBJtoRenderables("assets/models/sphere.obj", glm::vec3(0.2, 0.7, 0.6), glm::vec3(0.6, 0.1, 0.1), glm::vec3(1,0,0), 0.2);
-		loadOBJtoRenderables("assets/models/sphere.obj", glm::vec3(0.2, 0.7, 0.6), glm::vec3(0.6, 0.1, 0.1), glm::vec3(1,0,0), 0.2);
-		loadOBJtoRenderables("assets/models/sphere.obj", glm::vec3(0.2, 0.7, 0.6), glm::vec3(0.6, 0.1, 0.1), glm::vec3(1,0,0), 0.2);
+		//loadOBJtoRenderables("assets/models/ground.obj",glm::vec3(0.8, 0.7, 0.6), glm::vec3(0.9, 0, 0), glm::vec3(1, 1, 0), 0.3);
+		//loadOBJtoRenderables("assets/models/HQ_Movie cycle_lookY.obj", glm::vec3(0, 0.7, 0.6), glm::vec3(0.6, 0, 0.4), glm::vec3(1, 0, 1), 0.4);
+		//loadOBJtoRenderables("assets/models/sphere.obj", glm::vec3(0.2, 0.7, 0.6), glm::vec3(0.6, 0.1, 0.1), glm::vec3(1,0,0), 0.2);
+		//loadOBJtoRenderables("assets/models/sphere.obj", glm::vec3(0.2, 0.7, 0.6), glm::vec3(0.6, 0.1, 0.1), glm::vec3(1,0,0), 0.2);
+		//loadOBJtoRenderables("assets/models/sphere.obj", glm::vec3(0.2, 0.7, 0.6), glm::vec3(0.6, 0.1, 0.1), glm::vec3(1,0,0), 0.2);
+		//loadOBJtoRenderables("assets/models/sphere.obj", glm::vec3(0.2, 0.7, 0.6), glm::vec3(0.6, 0.1, 0.1), glm::vec3(1,0,0), 0.2);
 		
+
+		loadOBJtoRenderables("assets/models/sphere.obj", Material("assets/textures/red.png", "assets/textures/blue.png", "assets/textures/green.png", 0.2, false, m_shader));
+		loadOBJtoRenderables("assets/models/sphere.obj", Material("assets/textures/red.png", "assets/textures/blue.png", "assets/textures/green.png", 0.2, false, m_shader));
+		loadOBJtoRenderables("assets/models/sphere.obj", Material("assets/textures/red.png", "assets/textures/blue.png", "assets/textures/green.png", 0.2, false, m_shader));
+		loadOBJtoRenderables("assets/models/sphere.obj", Material("assets/textures/red.png", "assets/textures/blue.png", "assets/textures/green.png", 0.2, false, m_shader));
+		loadOBJtoRenderables("assets/models/sphere.obj", Material("assets/textures/red.png", "assets/textures/blue.png", "assets/textures/green.png", 0.2, false, m_shader));
+		loadOBJtoRenderables("assets/models/sphere.obj", Material("assets/textures/red.png", "assets/textures/blue.png", "assets/textures/green.png", 0.2, false, m_shader));
 
 		renderables[0].setScale(glm::vec3(0.10, 0.10, 0.10));
 		//renderables[0].setScale(glm::vec3(100, 100, 100));
@@ -115,6 +122,7 @@ void Scene::render(float dt)
 		changeCamera = false;
 	}
 
+	m_shader->use();
 	
 	m_shader->setUniform("lightColorAmbient", ambientLight);
 
@@ -307,7 +315,7 @@ void Scene::onFrameBufferResize(int width, int height)
 
 }
 
-void Scene::loadOBJtoRenderables(string path, glm::vec3 diffColor, glm::vec3 emisColor, glm::vec3 specColor, float shine)
+void Scene::loadOBJtoRenderables(string path, Material mat)
 {
 	vector<Mesh> meshesFromObj;
 
@@ -317,7 +325,7 @@ void Scene::loadOBJtoRenderables(string path, glm::vec3 diffColor, glm::vec3 emi
 		vector<VertexAttribute> va = m.atts;
 		vector<Vertex> v = m.vertices;
 		vector<Index> ind = m.indices;
-		Mesh me(v, va, ind, diffColor, emisColor, specColor, shine);
+		Mesh me(v, va, ind, mat);
 		meshesFromObj.push_back(me);
 	}
 
