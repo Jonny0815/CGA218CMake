@@ -30,12 +30,13 @@ bool Scene::init()
 	{
 		//Load shader
 		m_assets.addShaderProgram("shader", AssetManager::createShaderProgram("assets/shaders/vertex.glsl", "assets/shaders/fragment.glsl"));
-		m_shader = m_assets.getShaderProgram("shader");
+		m_assets.addShaderProgram("shader2", AssetManager::createShaderProgram("assets/shaders/vertex2.glsl", "assets/shaders/fragment2.glsl"));
+		m_shaders = m_assets.getShaders();
 
 		
 		
 		
-		//loadOBJtoRenderables("assets/models/ground.obj",glm::vec3(0.8, 0.7, 0.6), glm::vec3(0.9, 0, 0), glm::vec3(1, 1, 0), 0.3);
+		loadOBJtoRenderables("assets/models/ground.obj", Material("assets/textures/red.png", "assets/textures/blue.png", "assets/textures/green.png", 0.2, false, m_assets.getShaderProgram("shader")));
 		//loadOBJtoRenderables("assets/models/HQ_Movie cycle_lookY.obj", glm::vec3(0, 0.7, 0.6), glm::vec3(0.6, 0, 0.4), glm::vec3(1, 0, 1), 0.4);
 		//loadOBJtoRenderables("assets/models/sphere.obj", glm::vec3(0.2, 0.7, 0.6), glm::vec3(0.6, 0.1, 0.1), glm::vec3(1,0,0), 0.2);
 		//loadOBJtoRenderables("assets/models/sphere.obj", glm::vec3(0.2, 0.7, 0.6), glm::vec3(0.6, 0.1, 0.1), glm::vec3(1,0,0), 0.2);
@@ -43,12 +44,12 @@ bool Scene::init()
 		//loadOBJtoRenderables("assets/models/sphere.obj", glm::vec3(0.2, 0.7, 0.6), glm::vec3(0.6, 0.1, 0.1), glm::vec3(1,0,0), 0.2);
 		
 
-		loadOBJtoRenderables("assets/models/sphere.obj", Material("assets/textures/red.png", "assets/textures/blue.png", "assets/textures/green.png", 0.2, false, m_shader));
-		loadOBJtoRenderables("assets/models/sphere.obj", Material("assets/textures/red.png", "assets/textures/blue.png", "assets/textures/green.png", 0.2, false, m_shader));
-		loadOBJtoRenderables("assets/models/sphere.obj", Material("assets/textures/red.png", "assets/textures/blue.png", "assets/textures/green.png", 0.2, false, m_shader));
-		loadOBJtoRenderables("assets/models/sphere.obj", Material("assets/textures/red.png", "assets/textures/blue.png", "assets/textures/green.png", 0.2, false, m_shader));
-		loadOBJtoRenderables("assets/models/sphere.obj", Material("assets/textures/red.png", "assets/textures/blue.png", "assets/textures/green.png", 0.2, false, m_shader));
-		loadOBJtoRenderables("assets/models/sphere.obj", Material("assets/textures/red.png", "assets/textures/blue.png", "assets/textures/green.png", 0.2, false, m_shader));
+		loadOBJtoRenderables("assets/models/sphere.obj", Material("assets/textures/red.png", "assets/textures/blue.png", "assets/textures/green.png", 0.2, false, m_assets.getShaderProgram("shader2")));
+		loadOBJtoRenderables("assets/models/sphere.obj", Material("assets/textures/red.png", "assets/textures/blue.png", "assets/textures/green.png", 0.2, false, m_assets.getShaderProgram("shader2")));
+		loadOBJtoRenderables("assets/models/sphere.obj", Material("assets/textures/red.png", "assets/textures/blue.png", "assets/textures/green.png", 0.2, false, m_assets.getShaderProgram("shader2")));
+		loadOBJtoRenderables("assets/models/sphere.obj", Material("assets/textures/red.png", "assets/textures/blue.png", "assets/textures/green.png", 0.2, false, m_assets.getShaderProgram("shader2")));
+		loadOBJtoRenderables("assets/models/sphere.obj", Material("assets/textures/red.png", "assets/textures/blue.png", "assets/textures/green.png", 0.2, false, m_assets.getShaderProgram("shader")));
+		
 
 		renderables[0].setScale(glm::vec3(0.10, 0.10, 0.10));
 		//renderables[0].setScale(glm::vec3(100, 100, 100));
@@ -71,13 +72,10 @@ bool Scene::init()
 		renderables[5].setPosition(glm::vec3(0.5, 0.2, 2));
 
 		pointLights.push_back(PointLight("test", glm::vec3(1, 1, 1), glm::vec3(1, 1, 1)));
-		pointLights[0].bind(m_shader);
 		pointLights[0].translate(glm::vec3(1, 1, 1));
 		pointLights[0].setParent(&renderables[1]);
 
 		mv_cameras[0]->translate(vec3(0.0, 0.0, -2.0));
-		mv_cameras[0]->bind(m_shader);
-		mv_cameras[1]->bind(m_shader);
 
 		mv_cameras[1]->setParent(&renderables[1]);
 
@@ -122,23 +120,26 @@ void Scene::render(float dt)
 		changeCamera = false;
 	}
 
-	m_shader->use();
-	
-	m_shader->setUniform("lightColorAmbient", ambientLight);
-
-	for (size_t i = 0; i < pointLights.size(); i++)
+	for (auto it = m_shaders->begin(); it != m_shaders->end(); it++)
 	{
-		pointLights[i].render();
+
+		it->second.get()->use();
+
+		it->second.get()->setUniform("lightColorAmbient", ambientLight);
+
+		for (size_t i = 0; i < pointLights.size(); i++)
+		{
+			pointLights[i].render(it->second.get());
+		}
+
+		mv_cameras[useCamera]->render(it->second.get());
+
+		for (size_t i = 0; i < renderables.size(); i++)
+		{
+			renderables[i].render(it->second.get(), dt);
+		}
+
 	}
-
-	mv_cameras[useCamera]->render();
-
-	for (size_t i = 0; i < renderables.size(); i++)
-	{
-		renderables[i].render(m_shader, dt);
-	}
-
-	
 
 }
 

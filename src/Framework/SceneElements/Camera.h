@@ -8,10 +8,7 @@ class Camera: public Transform {
 public:
 	Camera(int h_with, int h_height, float h_angle, float h_nearClippingPlane, float h_farClippingPlane);
 
-	
-
-	void bind(ShaderProgram* h_shader);
-	void render();
+	void render(ShaderProgram* shader);
 
 protected:
 	virtual glm::mat4 getViewMatrix();
@@ -22,6 +19,4 @@ protected:
 	float m_angle = 0.0;
 	float m_nearClippingPlane = 0.0;
 	float m_farClippingPlane = 0.0;
-	
-	ShaderProgram* m_shader = nullptr;
 };

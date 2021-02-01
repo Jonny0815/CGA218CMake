@@ -21,10 +21,13 @@ Mesh::Mesh(vector<Vertex> vertecies, vector<VertexAttribute> attributes, vector<
 
 void Mesh::render(ShaderProgram* shader)
 {
-	_material.render();
-	glBindVertexArray(VAO); // seeing as we only have a single VAO there's no need to bind it every time, but we'll do so to keep things a bit more organized
-	glDrawElements(GL_TRIANGLES, _indicies.size(), GL_UNSIGNED_INT, 0);
-	glBindVertexArray(0);
+	if (_material.getShaderProg() == shader->prog)
+	{
+		_material.render();
+		glBindVertexArray(VAO); // seeing as we only have a single VAO there's no need to bind it every time, but we'll do so to keep things a bit more organized
+		glDrawElements(GL_TRIANGLES, _indicies.size(), GL_UNSIGNED_INT, 0);
+		glBindVertexArray(0);
+	}
 }
 
 	

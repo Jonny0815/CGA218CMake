@@ -8,12 +8,7 @@ PointLight::PointLight(std::string h_name, glm::vec3 h_color, glm::vec3 h_pos)
 	setPosition(h_pos);
 }
 
-void PointLight::bind(ShaderProgram* h_shader)
-{
-	shader = h_shader;
-}
-
-void PointLight::render()
+void PointLight::render(ShaderProgram* shader)
 {
 	shader->setUniform("lightPos", getPosition());
 	shader->setUniform("lightColor", color);

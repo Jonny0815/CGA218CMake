@@ -16,6 +16,8 @@ public:
 	static std::unique_ptr<ShaderProgram> createShaderProgram(const std::string& vspath, const std::string& fspath);
 
 	//member functions
+
+	std::unordered_map<std::string, std::unique_ptr<ShaderProgram>>* getShaders() { return &m_shaders; }
 	ShaderProgram* getShaderProgram(const std::string& name);
 	void addShaderProgram(const std::string& name, std::unique_ptr<ShaderProgram>&& shader);
 	bool removeShaderProgram(const std::string& name);

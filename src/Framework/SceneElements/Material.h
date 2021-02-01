@@ -11,6 +11,7 @@ public:
 
 	void render();
 
+	int getShaderProg() { return _shader->prog; }
 	
 private:
 

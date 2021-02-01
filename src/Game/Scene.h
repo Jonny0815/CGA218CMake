@@ -24,8 +24,6 @@ public:
 	void update(float dt);
 	GameWindow* getWindow();
 
-	
-
 	void onKey(Key key, Action action, Modifier modifier);
 	void onMouseMove(MousePosition mouseposition);
 	void onMouseButton(MouseButton button, Action action, Modifier modifier);
@@ -38,7 +36,7 @@ private:
 	bool changeCamera = false;
 	GameWindow* m_window;
 	AssetManager m_assets;
-    ShaderProgram* m_shader;
+	std::unordered_map<std::string, std::unique_ptr<ShaderProgram>>* m_shaders;
     GLuint vaoID, vboID;
 
 	glm::vec3 ambientLight{ 0.5,0.5,0.5 };
