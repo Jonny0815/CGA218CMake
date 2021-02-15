@@ -143,7 +143,7 @@ void Scene::render(float dt)
 
 		mv_cameras[useCamera]->render(it->second.get());
 
-		//skybox->render(it->second.get(), mv_cameras[useCamera]);
+		
 
 		for (size_t i = 0; i < pointLights.size(); i++)
 		{
@@ -155,7 +155,7 @@ void Scene::render(float dt)
 			renderables[i].render(it->second.get(), dt);
 		}
 
-		
+		skybox->render(it->second.get(), mv_cameras[useCamera]);
 
 	}
 
