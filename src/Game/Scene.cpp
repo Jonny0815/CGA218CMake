@@ -8,6 +8,7 @@ Scene::Scene(GameWindow* window) :
 
 	mv_cameras.push_back(new FreeCamera(m_window->getWindowWidth(), m_window->getWindowHeight(), 45.0, 0.1, 10.0));
 	mv_cameras.push_back(new ThirdPersonCamera(m_window->getWindowWidth(), m_window->getWindowHeight(), 45.0, 0.1, 10.0));
+
 }
 
 Scene::~Scene()
@@ -15,6 +16,11 @@ Scene::~Scene()
 	for (size_t i = 0; i < mv_cameras.size(); i++)
 	{
 		delete mv_cameras[i];
+	}
+
+	if (skybox)
+	{
+		delete skybox;
 	}
 }
 
@@ -29,11 +35,13 @@ bool Scene::init()
 	try
 	{
 		//Load shader
+		m_assets.addShaderProgram("skybox", AssetManager::createShaderProgram("assets/shaders/skybox_vertex.glsl", "assets/shaders/skybox_fragment.glsl"));
 		m_assets.addShaderProgram("shader", AssetManager::createShaderProgram("assets/shaders/vertex.glsl", "assets/shaders/fragment.glsl"));
 		m_assets.addShaderProgram("shader2", AssetManager::createShaderProgram("assets/shaders/vertex2.glsl", "assets/shaders/fragment2.glsl"));
+		
 		m_shaders = m_assets.getShaders();
 
-		
+		skybox = new Skybox(m_assets.getShaderProgram("skybox"));
 		
 		
 		loadOBJtoRenderables("assets/models/ground.obj", Material("assets/textures/red.png", "assets/textures/blue.png", "assets/textures/green.png", 0.2, false, m_assets.getShaderProgram("shader")));
@@ -44,32 +52,36 @@ bool Scene::init()
 		//loadOBJtoRenderables("assets/models/sphere.obj", glm::vec3(0.2, 0.7, 0.6), glm::vec3(0.6, 0.1, 0.1), glm::vec3(1,0,0), 0.2);
 		
 
-		loadOBJtoRenderables("assets/models/sphere.obj", Material("assets/textures/red.png", "assets/textures/blue.png", "assets/textures/green.png", 0.2, false, m_assets.getShaderProgram("shader2")));
-		loadOBJtoRenderables("assets/models/sphere.obj", Material("assets/textures/red.png", "assets/textures/blue.png", "assets/textures/green.png", 0.2, false, m_assets.getShaderProgram("shader2")));
-		loadOBJtoRenderables("assets/models/sphere.obj", Material("assets/textures/red.png", "assets/textures/blue.png", "assets/textures/green.png", 0.2, false, m_assets.getShaderProgram("shader2")));
-		loadOBJtoRenderables("assets/models/sphere.obj", Material("assets/textures/red.png", "assets/textures/blue.png", "assets/textures/green.png", 0.2, false, m_assets.getShaderProgram("shader2")));
-		loadOBJtoRenderables("assets/models/sphere.obj", Material("assets/textures/red.png", "assets/textures/blue.png", "assets/textures/green.png", 0.2, false, m_assets.getShaderProgram("shader")));
+		//loadOBJtoRenderables("assets/models/sphere.obj", Material("assets/textures/red.png", "assets/textures/blue.png", "assets/textures/green.png", 0.2, false, m_assets.getShaderProgram("shader2")));
+		//loadOBJtoRenderables("assets/models/sphere.obj", Material("assets/textures/red.png", "assets/textures/blue.png", "assets/textures/green.png", 0.2, false, m_assets.getShaderProgram("shader2")));
+		//loadOBJtoRenderables("assets/models/sphere.obj", Material("assets/textures/red.png", "assets/textures/blue.png", "assets/textures/green.png", 0.2, false, m_assets.getShaderProgram("shader2")));
+		//loadOBJtoRenderables("assets/models/sphere.obj", Material("assets/textures/red.png", "assets/textures/blue.png", "assets/textures/green.png", 0.2, false, m_assets.getShaderProgram("shader2")));
+		//loadOBJtoRenderables("assets/models/sphere.obj", Material("assets/textures/red.png", "assets/textures/blue.png", "assets/textures/green.png", 0.2, false, m_assets.getShaderProgram("shader")));
 		
+		loadOBJtoRenderables("assets/models/tree1.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.9, false, m_assets.getShaderProgram("shader")));
+		loadOBJtoRenderables("assets/models/tree2.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.0, false, m_assets.getShaderProgram("shader")));
+		loadOBJtoRenderables("assets/models/tree3.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")));
 
-		renderables[0].setScale(glm::vec3(0.10, 0.10, 0.10));
+		
+		//renderables[0].setScale(glm::vec3(0.10, 0.10, 0.10));
 		//renderables[0].setScale(glm::vec3(100, 100, 100));
 		vec3 angles(270, 0, 0);
 		renderables[0].rotate(glm::quat(angles));
-		renderables[0].setPosition(glm::vec3(0.0, -0.9, -0.5));
+		renderables[0].setPosition(glm::vec3(0.0, 0.0, 0.0));
 		renderables[1].setScale(glm::vec3(0.5, 0.4, 0.3));
 		//renderables[1].setRotation(glm::quat(glm::vec3(glm::radians(-90.0), glm::radians(-90.0), 0)));
 		renderables[2].setScale(glm::vec3(0.3, 0.4, 0.2));
 		renderables[2].setPosition(glm::vec3(0.8, 0.7, 0));
-		renderables[3].setScale(glm::vec3(0.2, 0.3, 0.4));
-		renderables[3].setPosition(glm::vec3(-0.8, 0.7, 0));
-		renderables[4].setPosition(glm::vec3(-0.7, 0.8, 0.0));
-
-		renderables[2].setParent(&renderables[1]);
-		renderables[3].setParent(&renderables[1]);
-		renderables[4].setParent(&renderables[3]);
-
-		renderables[5].setScale(glm::vec3(0.1, 0.3, 0.2));
-		renderables[5].setPosition(glm::vec3(0.5, 0.2, 2));
+		//renderables[3].setScale(glm::vec3(0.2, 0.3, 0.4));
+		//renderables[3].setPosition(glm::vec3(-0.8, 0.7, 0));
+		//renderables[4].setPosition(glm::vec3(-0.7, 0.8, 0.0));
+		//
+		//renderables[2].setParent(&renderables[1]);
+		//renderables[3].setParent(&renderables[1]);
+		//renderables[4].setParent(&renderables[3]);
+		//
+		//renderables[5].setScale(glm::vec3(0.1, 0.3, 0.2));
+		//renderables[5].setPosition(glm::vec3(0.5, 0.2, 2));
 
 		pointLights.push_back(PointLight("test", glm::vec3(1, 1, 1), glm::vec3(1, 1, 1)));
 		pointLights[0].translate(glm::vec3(1, 1, 1));
@@ -122,22 +134,28 @@ void Scene::render(float dt)
 
 	for (auto it = m_shaders->begin(); it != m_shaders->end(); it++)
 	{
-
+		
 		it->second.get()->use();
 
 		it->second.get()->setUniform("lightColorAmbient", ambientLight);
+
+		
+
+		mv_cameras[useCamera]->render(it->second.get());
+
+		//skybox->render(it->second.get(), mv_cameras[useCamera]);
 
 		for (size_t i = 0; i < pointLights.size(); i++)
 		{
 			pointLights[i].render(it->second.get());
 		}
 
-		mv_cameras[useCamera]->render(it->second.get());
-
 		for (size_t i = 0; i < renderables.size(); i++)
 		{
 			renderables[i].render(it->second.get(), dt);
 		}
+
+		
 
 	}
 
@@ -298,6 +316,21 @@ void Scene::onKey(Key key, Action action, Modifier modifier)
 
 void Scene::onMouseMove(MousePosition mouseposition)
 {
+	if (firstMouse)
+	{
+		mouseposition.oldX = mouseposition.X;
+		mouseposition.oldY = mouseposition.Y;
+		firstMouse = false;
+	}
+
+	float xoffset = mouseposition.X - mouseposition.oldX;
+	float yoffset = mouseposition.oldY - mouseposition.Y; // reversed since y-coordinates go from bottom to top
+
+	mouseposition.oldX = mouseposition.X;
+	mouseposition.oldY = mouseposition.Y;
+
+	mv_cameras[useCamera]->ProcessMouseMovement(xoffset, yoffset * -1, true);
+
 
 }
 
