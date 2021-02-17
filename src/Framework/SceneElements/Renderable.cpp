@@ -3,8 +3,9 @@
 Renderable::Renderable() {
 
 }
-Renderable::Renderable(vector<Mesh> meshes) {
+Renderable::Renderable(vector<Mesh> meshes, Type t) {
 	meshList = meshes; 
+	type = t;
 }
 void Renderable::addMesh(Mesh mesh) {
 	meshList.push_back(mesh); 

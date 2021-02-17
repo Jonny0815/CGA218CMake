@@ -44,13 +44,13 @@ private:
 	std::unordered_map<std::string, std::unique_ptr<ShaderProgram>>* m_shaders;
     GLuint vaoID, vboID;
 
-	glm::vec3 ambientLight{ 0.6,0.2,0.9 };
+	glm::vec3 ambientLight{ 0.1,0.1,0.4 };
 	Skybox* skybox = nullptr;
 	vector<Renderable> renderables;
 	vector<PointLight> pointLights;
 
 
-	void loadOBJtoRenderables(string path, Material mat);
+	void loadOBJtoRenderables(string path, Material mat, Type t);
 
 };
 

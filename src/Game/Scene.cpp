@@ -6,8 +6,8 @@ Scene::Scene(GameWindow* window) :
 {
 	assert(window != nullptr);
 
-	mv_cameras.push_back(new FreeCamera(m_window->getWindowWidth(), m_window->getWindowHeight(), 45.0, 0.1, 10.0));
-	mv_cameras.push_back(new ThirdPersonCamera(m_window->getWindowWidth(), m_window->getWindowHeight(), 45.0, 0.1, 10.0));
+	mv_cameras.push_back(new FreeCamera(m_window->getWindowWidth(), m_window->getWindowHeight(), 45.0, 0.1, 120.0));
+	mv_cameras.push_back(new ThirdPersonCamera(m_window->getWindowWidth(), m_window->getWindowHeight(), 45.0, 0.1, 120.0));
 
 }
 
@@ -36,6 +36,7 @@ bool Scene::init()
 	{
 		//Load shader
 		m_assets.addShaderProgram("skybox", AssetManager::createShaderProgram("assets/shaders/skybox_vertex.glsl", "assets/shaders/skybox_fragment.glsl"));
+		m_assets.addShaderProgram("ground", AssetManager::createShaderProgram("assets/shaders/ground_vertex.glsl", "assets/shaders/ground_fragment.glsl"));
 		m_assets.addShaderProgram("shader", AssetManager::createShaderProgram("assets/shaders/vertex.glsl", "assets/shaders/fragment.glsl"));
 		m_assets.addShaderProgram("shader2", AssetManager::createShaderProgram("assets/shaders/vertex2.glsl", "assets/shaders/fragment2.glsl"));
 		
@@ -44,7 +45,7 @@ bool Scene::init()
 		skybox = new Skybox(m_assets.getShaderProgram("skybox"));
 		
 		
-		loadOBJtoRenderables("assets/models/ground.obj", Material("assets/textures/red.png", "assets/textures/blue.png", "assets/textures/green.png", 0.2, false, m_assets.getShaderProgram("shader")));
+		loadOBJtoRenderables("assets/models/ground.obj", Material("assets/textures/ground.png", "assets/textures/ground.png", "assets/textures/ground.png", 0.2, false, m_assets.getShaderProgram("ground")), Type::Ground);
 		//loadOBJtoRenderables("assets/models/HQ_Movie cycle_lookY.obj", glm::vec3(0, 0.7, 0.6), glm::vec3(0.6, 0, 0.4), glm::vec3(1, 0, 1), 0.4);
 		//loadOBJtoRenderables("assets/models/sphere.obj", glm::vec3(0.2, 0.7, 0.6), glm::vec3(0.6, 0.1, 0.1), glm::vec3(1,0,0), 0.2);
 		//loadOBJtoRenderables("assets/models/sphere.obj", glm::vec3(0.2, 0.7, 0.6), glm::vec3(0.6, 0.1, 0.1), glm::vec3(1,0,0), 0.2);
@@ -58,9 +59,9 @@ bool Scene::init()
 		//loadOBJtoRenderables("assets/models/sphere.obj", Material("assets/textures/red.png", "assets/textures/blue.png", "assets/textures/green.png", 0.2, false, m_assets.getShaderProgram("shader2")));
 		//loadOBJtoRenderables("assets/models/sphere.obj", Material("assets/textures/red.png", "assets/textures/blue.png", "assets/textures/green.png", 0.2, false, m_assets.getShaderProgram("shader")));
 		
-		loadOBJtoRenderables("assets/models/tree1.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.9, false, m_assets.getShaderProgram("shader")));
-		loadOBJtoRenderables("assets/models/tree2.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.0, false, m_assets.getShaderProgram("shader")));
-		loadOBJtoRenderables("assets/models/tree3.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")));
+		loadOBJtoRenderables("assets/models/tree1.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.9, false, m_assets.getShaderProgram("shader")), Type::Tree);
+		//loadOBJtoRenderables("assets/models/tree2.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.0, false, m_assets.getShaderProgram("shader")), Type::Tree);
+		//loadOBJtoRenderables("assets/models/tree3.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
 
 		
 		//renderables[0].setScale(glm::vec3(0.10, 0.10, 0.10));
@@ -68,10 +69,10 @@ bool Scene::init()
 		vec3 angles(270, 0, 0);
 		renderables[0].rotate(glm::quat(angles));
 		renderables[0].setPosition(glm::vec3(0.0, 0.0, 0.0));
-		renderables[1].setScale(glm::vec3(0.5, 0.4, 0.3));
+		//renderables[1].setScale(glm::vec3(1.0, 1.0, 1.0));
 		//renderables[1].setRotation(glm::quat(glm::vec3(glm::radians(-90.0), glm::radians(-90.0), 0)));
-		renderables[2].setScale(glm::vec3(0.3, 0.4, 0.2));
-		renderables[2].setPosition(glm::vec3(0.8, 0.7, 0));
+		//renderables[2].setScale(glm::vec3(0.3, 0.4, 0.2));
+		//renderables[2].setPosition(glm::vec3(0.8, 0.7, 0));
 		//renderables[3].setScale(glm::vec3(0.2, 0.3, 0.4));
 		//renderables[3].setPosition(glm::vec3(-0.8, 0.7, 0));
 		//renderables[4].setPosition(glm::vec3(-0.7, 0.8, 0.0));
@@ -87,7 +88,7 @@ bool Scene::init()
 		pointLights[0].translate(glm::vec3(1, 1, 1));
 		pointLights[0].setParent(&renderables[1]);
 
-		mv_cameras[0]->translate(vec3(0.0, 0.0, -2.0));
+		mv_cameras[0]->translate(vec3(0.0, 5.0, -2.0));
 
 		mv_cameras[1]->setParent(&renderables[1]);
 
@@ -349,7 +350,7 @@ void Scene::onFrameBufferResize(int width, int height)
 
 }
 
-void Scene::loadOBJtoRenderables(string path, Material mat)
+void Scene::loadOBJtoRenderables(string path, Material mat, Type t)
 {
 	vector<Mesh> meshesFromObj;
 
@@ -363,7 +364,7 @@ void Scene::loadOBJtoRenderables(string path, Material mat)
 		meshesFromObj.push_back(me);
 	}
 
-	renderables.push_back(Renderable(meshesFromObj));
+	renderables.push_back(Renderable(meshesFromObj, t));
 
 	 return;
 }
