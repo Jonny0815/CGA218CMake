@@ -32,5 +32,5 @@ void Material::render()
 	_shader->getFreeTU();
 	getSpec().useTexture(_shader->getCurrentTU());
 	_shader->setUniform("matSpecular", (GLint)_shader->getCurrentTU());
-	
+	_shader->setUniform("matShininess", _shininess);
 }

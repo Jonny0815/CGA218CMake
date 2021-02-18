@@ -11,8 +11,7 @@
 #include "FreeCamera.h"
 #include "ThirdPersonCamera.h"
 #include "PointLight.h"
-#include "PixelEmitter.h"
-
+#include "Skybox.h"
 
 class Scene
 {
@@ -33,23 +32,25 @@ public:
 	void onFrameBufferResize(int width, int height);
 
 private:
+	//camera stuff
 	vector<Camera*> mv_cameras;
-	vector<PixelEmitter*> pixelEmitters; 
 	int useCamera = 0;
 	bool changeCamera = false;
+	bool firstMouse = true;
+
+
 	GameWindow* m_window;
 	AssetManager m_assets;
 	std::unordered_map<std::string, std::unique_ptr<ShaderProgram>>* m_shaders;
-	ShaderProgram* pixel; 
-	ShaderProgram* regular; 
     GLuint vaoID, vboID;
 
-	glm::vec3 ambientLight{ 1.0,1.0,1.0 };
-
+	glm::vec3 ambientLight{ 0.1,0.1,0.4 };
+	Skybox* skybox = nullptr;
 	vector<Renderable> renderables;
 	vector<PointLight> pointLights;
 
-	void loadOBJtoRenderables(string path, Material mat);
+
+	void loadOBJtoRenderables(string path, Material mat, Type t);
 
 };
 
