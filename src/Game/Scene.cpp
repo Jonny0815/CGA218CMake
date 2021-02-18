@@ -39,6 +39,7 @@ bool Scene::init()
 		m_assets.addShaderProgram("ground", AssetManager::createShaderProgram("assets/shaders/ground_vertex.glsl", "assets/shaders/ground_fragment.glsl"));
 		m_assets.addShaderProgram("shader", AssetManager::createShaderProgram("assets/shaders/vertex.glsl", "assets/shaders/fragment.glsl"));
 		m_assets.addShaderProgram("shader2", AssetManager::createShaderProgram("assets/shaders/vertex2.glsl", "assets/shaders/fragment2.glsl"));
+		m_assets.addShaderProgram("pixelemitter", AssetManager::createShaderProgram("assets/shaders/pixelEmitterVertex.glsl", "assets/shaders/pixelEmitterFragment.glsl"));
 		
 		m_shaders = m_assets.getShaders();
 
@@ -63,7 +64,9 @@ bool Scene::init()
 		//loadOBJtoRenderables("assets/models/tree2.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.0, false, m_assets.getShaderProgram("shader")), Type::Tree);
 		//loadOBJtoRenderables("assets/models/tree3.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
 
-		
+		pixelEmitters.push_back(PixelEmitter(m_assets.getShaderProgram("pixelemitter")));
+		pixelEmitters[0].setPosition(vec3(1.0, 3.0, 1.0));
+		pixelEmitters[0].setMaterial(Material("assets/textures/heart.png", "assets/textures/heart.png", "assets/textures/heart.png", 0.2, false, m_assets.getShaderProgram("pixelemitter")));
 		//renderables[0].setScale(glm::vec3(0.10, 0.10, 0.10));
 		//renderables[0].setScale(glm::vec3(100, 100, 100));
 		vec3 angles(270, 0, 0);
@@ -154,6 +157,11 @@ void Scene::render(float dt)
 		for (size_t i = 0; i < renderables.size(); i++)
 		{
 			renderables[i].render(it->second.get(), dt);
+		}
+
+		for (size_t i = 0; i < pixelEmitters.size(); i++)
+		{
+			pixelEmitters[i].render(it->second.get(), dt);
 		}
 
 		skybox->render(it->second.get(), mv_cameras[useCamera]);

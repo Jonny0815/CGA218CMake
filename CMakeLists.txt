@@ -40,6 +40,8 @@ list(APPEND SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/src/Framework/SceneElements/Poi
 list(APPEND SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/src/Framework/SceneElements/PointLight.cpp")
 list(APPEND SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/src/Framework/SceneElements/Skybox.h")
 list(APPEND SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/src/Framework/SceneElements/Skybox.cpp")
+list(APPEND SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/src/Framework/SceneElements/PixelEmitter.h")
+list(APPEND SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/src/Framework/SceneElements/PixelEmitter.cpp")
 # add that directory to include list:
 list(APPEND INCLUDES "${CMAKE_CURRENT_SOURCE_DIR}/src/Framework/SceneElements")
 ## Game

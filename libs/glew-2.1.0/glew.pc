@@ -1,6 +1,6 @@
-prefix=C:/Users/Jonny0815/source/repos/CGA218CMake/out/install/x64-Debug
+prefix=C:/Users/Jonny0815/Source/Repos/CGA218CMake/out/install/x64-Debug
 exec_prefix=${prefix}
-libdir=C:/Users/Jonny0815/source/repos/CGA218CMake/out/install/x64-Debug/lib
+libdir=C:/Users/Jonny0815/Source/Repos/CGA218CMake/out/install/x64-Debug/lib
 includedir=${prefix}/include
 
 Name: glew
