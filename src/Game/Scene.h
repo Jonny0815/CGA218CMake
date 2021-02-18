@@ -11,6 +11,8 @@
 #include "FreeCamera.h"
 #include "ThirdPersonCamera.h"
 #include "PointLight.h"
+#include "PixelEmitter.h"
+
 
 class Scene
 {
@@ -32,14 +34,17 @@ public:
 
 private:
 	vector<Camera*> mv_cameras;
+	vector<PixelEmitter*> pixelEmitters; 
 	int useCamera = 0;
 	bool changeCamera = false;
 	GameWindow* m_window;
 	AssetManager m_assets;
 	std::unordered_map<std::string, std::unique_ptr<ShaderProgram>>* m_shaders;
+	ShaderProgram* pixel; 
+	ShaderProgram* regular; 
     GLuint vaoID, vboID;
 
-	glm::vec3 ambientLight{ 0.5,0.5,0.5 };
+	glm::vec3 ambientLight{ 1.0,1.0,1.0 };
 
 	vector<Renderable> renderables;
 	vector<PointLight> pointLights;

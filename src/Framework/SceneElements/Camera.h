@@ -9,10 +9,11 @@ public:
 	Camera(int h_with, int h_height, float h_angle, float h_nearClippingPlane, float h_farClippingPlane);
 
 	void render(ShaderProgram* shader);
-
-protected:
 	virtual glm::mat4 getViewMatrix();
 	glm::mat4 getProjectionMatrix();
+
+protected:
+	
 
 	int m_with = 0;
 	int m_height = 0;

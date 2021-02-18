@@ -1,0 +1,7 @@
+prefix=D:/HDA/ShaderEntwicklung/Abgabe/out/install/x64-Debug (default)
+includedir=${prefix}/include
+
+Name: GLM
+Description: OpenGL Mathematics
+Version: 0.9.9
+Cflags: -I${includedir}

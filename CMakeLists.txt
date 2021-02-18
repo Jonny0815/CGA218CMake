@@ -69,7 +69,7 @@ add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/libs")
 ##--------------------------------executable target---------------------------------------------------------------------
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(CGA218 ${SOURCES})
+add_executable(CGA218 ${SOURCES} "src/Framework/SceneElements/PixelEmitter.h" "src/Framework/SceneElements/PixelEmitter.cpp")
 target_include_directories(
         CGA218
         PRIVATE ${INCLUDES}

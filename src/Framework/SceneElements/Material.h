@@ -1,3 +1,5 @@
+#ifndef MATERIAL_H
+#define MATERIAL_H
 #include <ShaderProgram.h>
 #include <Texture2D.h>
 #include <vector>
@@ -34,3 +36,4 @@ private:
 	ShaderProgram* _shader = nullptr;
 
 };
+#endif

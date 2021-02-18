@@ -1,0 +1,36 @@
+#version 330 core
+
+uniform float matShininess; 
+uniform vec3 matDiffuse; 
+uniform vec3 matSpecular; 
+uniform vec3 lightPos, lightColor; 
+uniform vec3 ambientlight, matEmissive; 
+uniform sampler2D tex0,tex1,tex2; 
+in vec3 Normal, LightDir, ViewDir; 
+in vec2 TexCoord; 
+
+out vec4 color; 
+
+void main(){
+	vec3 N = normalize(Normal); 
+	vec3 L = normalize(LightDir); 
+	vec3 V = normalize(ViewDir); 
+	vec3 R = normalize(reflect(-L,N));
+	
+	vec3 col = texture(tex0, TexCoord).rgb+ texture(tex1, TexCoord).rgb+texture(tex2, TexCoord).rgb; 
+	//diffuse
+	float cosA = max(0.0, dot(N,L));
+	vec3 DiffuseTerm = col * lightColor; 
+	color = vec4(DiffuseTerm * cosA, 1.0); 
+	
+	//ambient emissive
+	vec3 AmbientEmissiveTerm = matEmissive + col * ambientlight; 
+	color += vec4(AmbientEmissiveTerm, 0.0); 
+	//specular
+	float cosB = max(0.0, dot(R,V)); 
+	float cosBetaK = pow(cosB, matShininess); 
+	vec3 SpecularTerm = matSpecular * lightColor; 
+	color += vec4(SpecularTerm *cosBetaK, 0.0); 
+	
+}
+
