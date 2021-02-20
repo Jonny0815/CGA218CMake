@@ -13,6 +13,8 @@ Scene::Scene(GameWindow* window) :
 
 Scene::~Scene()
 {
+	cout <<"camera: " << mv_cameras[useCamera]->getPosition().x << ", " << mv_cameras[useCamera]->getPosition().y << ", " << mv_cameras[useCamera]->getPosition().z << ", " << endl;
+
 	for (size_t i = 0; i < mv_cameras.size(); i++)
 	{
 		delete mv_cameras[i];
@@ -22,6 +24,13 @@ Scene::~Scene()
 	{
 		delete skybox;
 	}
+
+	for (size_t i = 0; i < renderables.size(); i++)
+	{
+		cout << i << ": " << renderables[i].getPosition().x << ", " << renderables[i].getPosition().y << ", " << renderables[i].getPosition().z << ", " << endl;
+	}
+
+
 }
 
 
@@ -59,11 +68,70 @@ bool Scene::init()
 		//loadOBJtoRenderables("assets/models/sphere.obj", Material("assets/textures/red.png", "assets/textures/blue.png", "assets/textures/green.png", 0.2, false, m_assets.getShaderProgram("shader2")));
 		//loadOBJtoRenderables("assets/models/sphere.obj", Material("assets/textures/red.png", "assets/textures/blue.png", "assets/textures/green.png", 0.2, false, m_assets.getShaderProgram("shader2")));
 		//loadOBJtoRenderables("assets/models/sphere.obj", Material("assets/textures/red.png", "assets/textures/blue.png", "assets/textures/green.png", 0.2, false, m_assets.getShaderProgram("shader")));
-		loadOBJtoRenderables("assets/models/Ghost.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.9, false, m_assets.getShaderProgram("shader")), Type::Tree);
-		loadOBJtoRenderables("assets/models/tree1.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.9, false, m_assets.getShaderProgram("shader")), Type::Tree);
-		
-		//loadOBJtoRenderables("assets/models/tree2.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.0, false, m_assets.getShaderProgram("shader")), Type::Tree);
-		//loadOBJtoRenderables("assets/models/tree3.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
+		loadOBJtoRenderables("assets/models/tree0.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.9, false, m_assets.getShaderProgram("shader")), Type::Tree);
+		loadOBJtoRenderables("assets/models/tree1.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
+		loadOBJtoRenderables("assets/models/tree2.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.0, false, m_assets.getShaderProgram("shader")), Type::Tree);
+		loadOBJtoRenderables("assets/models/tree3.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
+		loadOBJtoRenderables("assets/models/tree4.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
+		loadOBJtoRenderables("assets/models/tree5.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
+		loadOBJtoRenderables("assets/models/tree6.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
+		loadOBJtoRenderables("assets/models/tree7.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
+		loadOBJtoRenderables("assets/models/tree8.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
+		loadOBJtoRenderables("assets/models/tree9.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
+		loadOBJtoRenderables("assets/models/tree0.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.9, false, m_assets.getShaderProgram("shader")), Type::Tree);
+		loadOBJtoRenderables("assets/models/tree1.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
+		loadOBJtoRenderables("assets/models/tree2.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.0, false, m_assets.getShaderProgram("shader")), Type::Tree);
+		loadOBJtoRenderables("assets/models/tree3.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
+		loadOBJtoRenderables("assets/models/tree4.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
+		loadOBJtoRenderables("assets/models/tree5.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
+		loadOBJtoRenderables("assets/models/tree6.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
+		loadOBJtoRenderables("assets/models/tree7.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
+		loadOBJtoRenderables("assets/models/tree8.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
+		loadOBJtoRenderables("assets/models/tree9.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
+		loadOBJtoRenderables("assets/models/tree0.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.9, false, m_assets.getShaderProgram("shader")), Type::Tree);
+		loadOBJtoRenderables("assets/models/tree1.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
+		loadOBJtoRenderables("assets/models/tree2.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.0, false, m_assets.getShaderProgram("shader")), Type::Tree);
+		loadOBJtoRenderables("assets/models/tree3.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
+		loadOBJtoRenderables("assets/models/tree4.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
+		loadOBJtoRenderables("assets/models/tree5.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
+		loadOBJtoRenderables("assets/models/tree6.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
+		loadOBJtoRenderables("assets/models/tree7.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
+		loadOBJtoRenderables("assets/models/tree8.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
+		loadOBJtoRenderables("assets/models/tree9.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
+
+		//renderables[0].setPosition(glm::vec3(0.0, -2.0, 0.0));
+		renderables[1].setPosition(glm::vec3(3.24, 0.1, -0.4));
+		renderables[2].setPosition(glm::vec3(2.3, 0.3, 1.0));
+		renderables[3].setPosition(glm::vec3(-3.8, 0.0, 0.6));
+		renderables[4].setPosition(glm::vec3(-5.5, -0.3, -2.7));
+		renderables[5].setPosition(glm::vec3(5.5, -0.5, -1.3));
+		renderables[6].setPosition(glm::vec3(5.1, 0.0, 0.2));
+		renderables[7].setPosition(glm::vec3(-0.1, 0.0, 1.7));
+		renderables[8].setPosition(glm::vec3(-2.0, -0.3, 2.0));
+		renderables[9].setPosition(glm::vec3(-7.0, 0.0, 2.0));
+		renderables[10].setPosition(glm::vec3(0.7, -0.3, -2.0));
+
+		renderables[11].setPosition(glm::vec3(3.24, 0.1, 2.4));
+		renderables[12].setPosition(glm::vec3(2.3, 0.3, 3.0));
+		renderables[13].setPosition(glm::vec3(-3.8, 0.0, 2.6));
+		renderables[14].setPosition(glm::vec3(-5.5, -0.3, 0.7));
+		renderables[15].setPosition(glm::vec3(5.5, -0.5, 1.3));
+		renderables[16].setPosition(glm::vec3(5.1, 0.0, 2.2));
+		renderables[17].setPosition(glm::vec3(-0.1, 0.0, 3.7));
+		renderables[18].setPosition(glm::vec3(-2.0, -0.3, 3.0));
+		renderables[19].setPosition(glm::vec3(-7.0, 0.0, 4.0));
+		renderables[20].setPosition(glm::vec3(0.7, -0.3, 2.0));
+
+		renderables[21].setPosition(glm::vec3(6.24, 0.1, -0.4));
+		renderables[22].setPosition(glm::vec3(4.3, 0.3, 1.0));
+		renderables[23].setPosition(glm::vec3(1.8, 0.0, 0.6));
+		renderables[24].setPosition(glm::vec3(-1.5, -0.3, -2.7));
+		renderables[25].setPosition(glm::vec3(9.5, -0.5, -1.3));
+		renderables[26].setPosition(glm::vec3(8.1, 0.0, 0.2));
+		renderables[27].setPosition(glm::vec3(4.1, 0.0, 1.7));
+		renderables[28].setPosition(glm::vec3(3.0, -0.3, 2.0));
+		renderables[29].setPosition(glm::vec3(-3.0, 0.0, 2.0));
+		renderables[30].setPosition(glm::vec3(4.7, -0.3, -2.0));
 
 		pixelEmitters.push_back(PixelEmitter(m_assets.getShaderProgram("pixelemitter")));
 		pixelEmitters[0].setPosition(vec3(1.0, 3.0, 1.0));
@@ -72,8 +140,8 @@ bool Scene::init()
 		//renderables[0].setScale(glm::vec3(100, 100, 100));
 		vec3 angles(270, 0, 0);
 		renderables[0].rotate(glm::quat(angles));
-		renderables[0].setPosition(glm::vec3(0.0, 0.0, 0.0));
-		renderables[1].setScale(glm::vec3(0.5, 0.5, 0.5));
+		renderables[0].setPosition(glm::vec3(0.0, -2.0, 0.0));
+		
 		//renderables[1].setRotation(glm::quat(glm::vec3(glm::radians(-90.0), glm::radians(-90.0), 0)));
 		//renderables[2].setScale(glm::vec3(0.3, 0.4, 0.2));
 		//renderables[2].setPosition(glm::vec3(0.8, 0.7, 0));
@@ -92,9 +160,10 @@ bool Scene::init()
 		pointLights[0].translate(glm::vec3(1, 1, 1));
 		pointLights[0].setParent(&renderables[1]);
 
-		mv_cameras[0]->translate(vec3(0.0, 5.0, -2.0));
+		//mv_cameras[0]->translate(vec3(0.0, 5.0, -2.0));
+		mv_cameras[0]->setPosition(vec3(-3.88, 2.12, -8.12));
 
-		mv_cameras[1]->setParent(&renderables[1]);
+		//mv_cameras[1]->setParent(&renderables[1]);
 
 		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
@@ -173,25 +242,38 @@ void Scene::render(float dt)
 
 void Scene::update(float dt)
 {
+	
 
-	//move balls
+	//move currentRenderable
 
-	if (m_window->getInput().getKeyState(Key::S) == KeyState::Pressed)
-	{
-		renderables[1].translate(vec3(0, -dt, 0));
-	}
 	if (m_window->getInput().getKeyState(Key::A) == KeyState::Pressed)
 	{
-		renderables[1].translate(vec3(dt, 0, 0));
-	}
-	if (m_window->getInput().getKeyState(Key::W) == KeyState::Pressed)
-	{
-		renderables[1].translate(vec3(0, dt, 0));
+		renderables[currentRenderable].translate(vec3(dt, 0, 0));
 	}
 	if (m_window->getInput().getKeyState(Key::D) == KeyState::Pressed)
 	{
-		renderables[1].translate(vec3(-dt, 0, 0));
+		renderables[currentRenderable].translate(vec3(-dt, 0, 0));
 	}
+	if (m_window->getInput().getKeyState(Key::LeftShift) == KeyState::Pressed)
+	{
+		renderables[currentRenderable].translate(vec3(0, dt, 0));
+	}
+	if (m_window->getInput().getKeyState(Key::LeftCtrl) == KeyState::Pressed)
+	{
+		renderables[currentRenderable].translate(vec3(0,-dt, 0));
+	}
+	if (m_window->getInput().getKeyState(Key::W) == KeyState::Pressed)
+	{
+		renderables[currentRenderable].translate(vec3(0, 0, -dt));
+	}
+	if (m_window->getInput().getKeyState(Key::S) == KeyState::Pressed)
+	{
+		renderables[currentRenderable].translate(vec3(0, 0, dt));
+	}
+
+
+
+	//move light 0
 
 	if (m_window->getInput().getKeyState(Key::K) == KeyState::Pressed)
 	{
@@ -211,37 +293,31 @@ void Scene::update(float dt)
 	}
 
 
-	if (m_window->getInput().getKeyState(Key::LeftCtrl) == KeyState::Pressed)
-	{
-		renderables[1].translate(vec3(0, 0, -dt));
-	}
-	if (m_window->getInput().getKeyState(Key::LeftShift) == KeyState::Pressed)
-	{
-		renderables[1].translate(vec3(0, 0, dt));
-	}
+	
 
 	//rotate balls
 
 	if (m_window->getInput().getKeyState(Key::E) == KeyState::Pressed)
 	{
 		vec3 angles(0, dt, 0);
-		renderables[1].rotate(angles);
+		renderables[currentRenderable].rotate(angles);
 	}
 	if (m_window->getInput().getKeyState(Key::Q) == KeyState::Pressed)
 	{
 		vec3 angles(0, -dt, 0);
-		renderables[1].rotate(angles);
+		renderables[currentRenderable].rotate(angles);
 	}
 
 	//scale balls
 
 	if (m_window->getInput().getKeyState(Key::R) == KeyState::Pressed)
 	{
-		renderables[1].scale(vec3(1+dt,1+dt,1+dt));
+		
+		renderables[currentRenderable].scale(vec3(1+dt,1+dt,1+dt));
 	}
 	if (m_window->getInput().getKeyState(Key::F) == KeyState::Pressed)
 	{
-		renderables[1].scale(vec3(1-dt, 1-dt, 1-dt));
+		renderables[currentRenderable].scale(vec3(1-dt, 1-dt, 1-dt));
 	}
 
 
@@ -274,41 +350,6 @@ void Scene::update(float dt)
 		mv_cameras[useCamera]->translate(vec3(0.0, 0.0, -dt));
 	}
 
-	//rotate cam
-
-	if (m_window->getInput().getKeyState(Key::NumPad2) == KeyState::Pressed)
-	{
-		vec3 angles(-dt, 0, 0);
-		mv_cameras[useCamera]->rotate(angles);
-	}
-	if (m_window->getInput().getKeyState(Key::NumPad8) == KeyState::Pressed)
-	{
-		vec3 angles(dt, 0, 0);
-		mv_cameras[useCamera]->rotate(angles);
-	}
-
-	if (m_window->getInput().getKeyState(Key::NumPad4) == KeyState::Pressed)
-	{
-		vec3 angles(0, -dt, 0);
-		mv_cameras[useCamera]->rotate(angles);
-	}
-	if (m_window->getInput().getKeyState(Key::NumPad6) == KeyState::Pressed)
-	{
-		vec3 angles(0, dt, 0);
-		mv_cameras[useCamera]->rotate(angles);
-	}
-
-	if (m_window->getInput().getKeyState(Key::NumPad7) == KeyState::Pressed)
-	{
-		vec3 angles(0, 0, -dt);
-		mv_cameras[useCamera]->rotate(angles);
-	}
-	if (m_window->getInput().getKeyState(Key::NumPad9) == KeyState::Pressed)
-	{
-		vec3 angles(0, 0, dt);
-		mv_cameras[useCamera]->rotate(angles);
-	}
-
 }
 
 GameWindow * Scene::getWindow()
@@ -321,6 +362,23 @@ void Scene::onKey(Key key, Action action, Modifier modifier)
 	if (key == Key::Space && action == Action::Down)
 	{
 		changeCamera = true;
+	}
+
+
+
+	if (key == Key::NumPadAdd && action == Action::Down)
+	{
+		if (currentRenderable < renderables.size())
+		{
+			currentRenderable++;
+		}
+	}
+	if (key == Key::NumPadSubtract && action == Action::Down)
+	{
+		if (currentRenderable > 0)
+		{
+			currentRenderable--;
+		}
 	}
 }
 

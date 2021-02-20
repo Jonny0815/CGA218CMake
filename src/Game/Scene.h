@@ -38,7 +38,7 @@ private:
 	int useCamera = 0;
 	bool changeCamera = false;
 	bool firstMouse = true;
-
+	int currentRenderable = 0;
 
 	GameWindow* m_window;
 	AssetManager m_assets;
