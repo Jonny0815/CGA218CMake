@@ -59,8 +59,9 @@ bool Scene::init()
 		//loadOBJtoRenderables("assets/models/sphere.obj", Material("assets/textures/red.png", "assets/textures/blue.png", "assets/textures/green.png", 0.2, false, m_assets.getShaderProgram("shader2")));
 		//loadOBJtoRenderables("assets/models/sphere.obj", Material("assets/textures/red.png", "assets/textures/blue.png", "assets/textures/green.png", 0.2, false, m_assets.getShaderProgram("shader2")));
 		//loadOBJtoRenderables("assets/models/sphere.obj", Material("assets/textures/red.png", "assets/textures/blue.png", "assets/textures/green.png", 0.2, false, m_assets.getShaderProgram("shader")));
-		
+		loadOBJtoRenderables("assets/models/Ghost.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.9, false, m_assets.getShaderProgram("shader")), Type::Tree);
 		loadOBJtoRenderables("assets/models/tree1.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.9, false, m_assets.getShaderProgram("shader")), Type::Tree);
+		
 		//loadOBJtoRenderables("assets/models/tree2.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.0, false, m_assets.getShaderProgram("shader")), Type::Tree);
 		//loadOBJtoRenderables("assets/models/tree3.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
 
@@ -72,7 +73,7 @@ bool Scene::init()
 		vec3 angles(270, 0, 0);
 		renderables[0].rotate(glm::quat(angles));
 		renderables[0].setPosition(glm::vec3(0.0, 0.0, 0.0));
-		//renderables[1].setScale(glm::vec3(1.0, 1.0, 1.0));
+		renderables[1].setScale(glm::vec3(0.5, 0.5, 0.5));
 		//renderables[1].setRotation(glm::quat(glm::vec3(glm::radians(-90.0), glm::radians(-90.0), 0)));
 		//renderables[2].setScale(glm::vec3(0.3, 0.4, 0.2));
 		//renderables[2].setPosition(glm::vec3(0.8, 0.7, 0));

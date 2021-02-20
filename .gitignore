@@ -54,7 +54,6 @@ artifacts/
 *_i.h
 *.ilk
 *.meta
-*.obj
 *.pch
 *.pdb
 *.pgc
@@ -249,3 +248,4 @@ paket-files/
 .idea/
 *.sln.iml
 /out/build/x64-Debug/.cmake/api/v1/reply
+/out/build/x64-Debug/CMakeFiles
