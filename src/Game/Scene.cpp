@@ -30,6 +30,10 @@ Scene::~Scene()
 		cout << i << ": " << renderables[i].getPosition().x << ", " << renderables[i].getPosition().y << ", " << renderables[i].getPosition().z << ", " << endl;
 	}
 
+	for (size_t i = 0; i < pixelEmitters.size(); i++)
+	{
+		delete pixelEmitters[i];
+	}
 
 }
 
@@ -49,6 +53,7 @@ bool Scene::init()
 		m_assets.addShaderProgram("shader", AssetManager::createShaderProgram("assets/shaders/vertex.glsl", "assets/shaders/fragment.glsl"));
 		m_assets.addShaderProgram("shader2", AssetManager::createShaderProgram("assets/shaders/vertex2.glsl", "assets/shaders/fragment2.glsl"));
 		m_assets.addShaderProgram("pixelemitter", AssetManager::createShaderProgram("assets/shaders/pixelEmitterVertex.glsl", "assets/shaders/pixelEmitterFragment.glsl"));
+		m_assets.addShaderProgram("fireemitter", AssetManager::createShaderProgram("assets/shaders/FireEmitterVertex.glsl", "assets/shaders/FireEmitterFragment.glsl"));
 		
 		m_shaders = m_assets.getShaders();
 
@@ -98,6 +103,7 @@ bool Scene::init()
 		loadOBJtoRenderables("assets/models/tree7.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
 		loadOBJtoRenderables("assets/models/tree8.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
 		loadOBJtoRenderables("assets/models/tree9.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
+		loadOBJtoRenderables("assets/models/fireplace.obj", Material("assets/textures/fireplace.png", "assets/textures/fireplace.png", "assets/textures/fireplace.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
 
 		//renderables[0].setPosition(glm::vec3(0.0, -2.0, 0.0));
 		renderables[1].setPosition(glm::vec3(3.24, 0.1, -0.4));
@@ -133,18 +139,24 @@ bool Scene::init()
 		renderables[29].setPosition(glm::vec3(-3.0, 0.0, 2.0));
 		renderables[30].setPosition(glm::vec3(4.7, -0.3, -2.0));
 
-		pixelEmitters.push_back(PixelEmitter(m_assets.getShaderProgram("pixelemitter")));
-		pixelEmitters.push_back(PixelEmitter(m_assets.getShaderProgram("pixelemitter")));
-		pixelEmitters[0].setPosition(vec3(1.0, 3.0, 1.0));
-		pixelEmitters[0].setMaterial(Material("assets/textures/leaf.png", "assets/textures/leaf.png", "assets/textures/leaf.png", 0.2, false, m_assets.getShaderProgram("pixelemitter")));
-		pixelEmitters[1].setPosition(vec3(-3.0, 3.0, 1.0));
-		pixelEmitters[1].setMaterial(Material("assets/textures/leaf2.png", "assets/textures/leaf2.png", "assets/textures/leaf2.png", 0.2, false, m_assets.getShaderProgram("pixelemitter")));
+		renderables[31].setPosition(vec3(-4.0, -0.7, -2));
+
+		pixelEmitters.push_back(new PixelEmitter(m_assets.getShaderProgram("pixelemitter")));
+		pixelEmitters.push_back(new PixelEmitter(m_assets.getShaderProgram("pixelemitter")));
+		pixelEmitters.push_back(new FireEmitter(m_assets.getShaderProgram("fireemitter")));
+		pixelEmitters[0]->setPosition(vec3(1.0, 3.0, 1.0));
+		pixelEmitters[0]->setMaterial(Material("assets/textures/leaf.png", "assets/textures/leaf.png", "assets/textures/leaf.png", 0.2, false, m_assets.getShaderProgram("pixelemitter")));
+		pixelEmitters[1]->setPosition(vec3(-3.0, 3.0, 1.0));
+		pixelEmitters[1]->setMaterial(Material("assets/textures/leaf2.png", "assets/textures/leaf2.png", "assets/textures/leaf2.png", 0.2, false, m_assets.getShaderProgram("pixelemitter")));
+		pixelEmitters[2]->setPosition(vec3(0.8, 1.2, -0.2));
+		pixelEmitters[2]->setParent(&renderables[31]);
+		pixelEmitters[2]->setMaterial(Material("assets/textures/ParticleAtlas.png", "assets/textures/ParticleAtlas.png", "assets/textures/ParticleAtlas.png", 0.2, false, m_assets.getShaderProgram("fireemitter")));
 		//pixelEmitters[0].setMaterial(Material("assets/textures/heart.png", "assets/textures/heart.png", "assets/textures/heart.png", 0.2, false, m_assets.getShaderProgram("pixelemitter")));
 		//renderables[0].setScale(glm::vec3(0.10, 0.10, 0.10));
 		//renderables[0].setScale(glm::vec3(100, 100, 100));
 		vec3 angles(270, 0, 0);
 		renderables[0].rotate(glm::quat(angles));
-		renderables[0].setPosition(glm::vec3(0.0, -2.0, 0.0));
+		renderables[0].setPosition(glm::vec3(0.0, -2.0, 0));
 		
 		//renderables[1].setRotation(glm::quat(glm::vec3(glm::radians(-90.0), glm::radians(-90.0), 0)));
 		//renderables[2].setScale(glm::vec3(0.3, 0.4, 0.2));
@@ -167,7 +179,7 @@ bool Scene::init()
 		//mv_cameras[0]->translate(vec3(0.0, 5.0, -2.0));
 		mv_cameras[0]->setPosition(vec3(-3.88, 1.12, -8.12));
 
-		//mv_cameras[1]->setParent(&renderables[1]);
+		//mv_cameras[1]->setParent(&renderables[31]);
 
 		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
@@ -235,7 +247,7 @@ void Scene::render(float dt)
 
 		for (size_t i = 0; i < pixelEmitters.size(); i++)
 		{
-			pixelEmitters[i].render(it->second.get(), dt);
+			pixelEmitters[i]->render(it->second.get(), dt, mv_cameras[useCamera]->getPosition());
 		}
 
 		skybox->render(it->second.get(), mv_cameras[useCamera]);

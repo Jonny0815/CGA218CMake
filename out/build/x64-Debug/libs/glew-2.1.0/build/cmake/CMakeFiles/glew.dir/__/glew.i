@@ -1,7 +1,7 @@
 #line 1 "C:\\Users\\Jonny0815\\source\\repos\\CGA218CMake\\libs\\glew-2.1.0\\build\\glew.rc"
 
-#line 1 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\windows.h"
-#line 1 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\winapifamily.h"
+#line 1 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\windows.h"
+#line 1 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\winapifamily.h"
 
 
 
@@ -23,11 +23,11 @@
 
 #pragma warning(push)
 #pragma warning(disable:4001) 
-#line 23 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\winapifamily.h"
+#line 23 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\winapifamily.h"
 #pragma once
-#line 25 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\winapifamily.h"
+#line 25 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\winapifamily.h"
 
-#line 1 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\winpackagefamily.h"
+#line 1 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\winpackagefamily.h"
 
 
 
@@ -49,13 +49,13 @@
 
 #pragma warning(push)
 #pragma warning(disable:4001) 
-#line 23 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\winpackagefamily.h"
+#line 23 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\winpackagefamily.h"
 #pragma once
-#line 25 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\winpackagefamily.h"
+#line 25 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\winpackagefamily.h"
 
 
 
-#line 29 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\winpackagefamily.h"
+#line 29 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\winpackagefamily.h"
 
 
 
@@ -115,11 +115,11 @@
 
 
 #pragma warning(pop)
-#line 89 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\winpackagefamily.h"
-#line 90 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\winpackagefamily.h"
+#line 89 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\winpackagefamily.h"
+#line 90 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\winpackagefamily.h"
 
-#line 92 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\winpackagefamily.h"
-#line 27 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\winapifamily.h"
+#line 92 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\winpackagefamily.h"
+#line 27 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\winapifamily.h"
 
 
 
@@ -183,7 +183,7 @@
 
 
 
-#line 91 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\winapifamily.h"
+#line 91 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\winapifamily.h"
 
 
 
@@ -235,34 +235,34 @@
 
 
 
-#line 148 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\winapifamily.h"
+#line 148 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\winapifamily.h"
 
 
 
-#line 152 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\winapifamily.h"
+#line 152 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\winapifamily.h"
 
 
 
 
 
 
-#line 159 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\winapifamily.h"
+#line 159 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\winapifamily.h"
 
 
 
 
 
-#line 165 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\winapifamily.h"
+#line 165 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\winapifamily.h"
 
 
 
-#line 169 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\winapifamily.h"
+#line 169 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\winapifamily.h"
 
 
 
 
 
-#line 175 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\winapifamily.h"
+#line 175 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\winapifamily.h"
 
 
 
@@ -274,8 +274,7 @@
 
 
 
-
-#line 188 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\winapifamily.h"
+#line 187 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\winapifamily.h"
 
 
 
@@ -332,18 +331,16 @@
 
 
 
-#line 245 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\winapifamily.h"
+#line 244 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\winapifamily.h"
 
 
 
 #pragma warning(pop)
-#line 250 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\winapifamily.h"
-#line 251 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\winapifamily.h"
+#line 249 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\winapifamily.h"
+#line 250 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\winapifamily.h"
 
-#line 253 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\winapifamily.h"
-#line 2 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\windows.h"
-
-
+#line 252 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\winapifamily.h"
+#line 2 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\windows.h"
 
 
 
@@ -362,7 +359,9 @@
 
 
 
-#line 1 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\sdkddkver.h"
+
+
+#line 1 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\sdkddkver.h"
 
 
 
@@ -384,9 +383,9 @@
 
 #pragma warning(push)
 #pragma warning(disable:4668) 
-#line 23 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\sdkddkver.h"
+#line 23 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\sdkddkver.h"
 #pragma warning(disable:4001) 
-#line 25 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\sdkddkver.h"
+#line 25 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\sdkddkver.h"
 
 #pragma once
 
@@ -568,8 +567,8 @@
 
 
 
-#line 207 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\sdkddkver.h"
 
+#line 208 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\sdkddkver.h"
 
 
 
@@ -580,57 +579,57 @@
 
 
 
-#line 219 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\sdkddkver.h"
 
+#line 220 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\sdkddkver.h"
 
 
 
 
 
-#line 226 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\sdkddkver.h"
 
+#line 227 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\sdkddkver.h"
 
-#line 229 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\sdkddkver.h"
 
+#line 230 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\sdkddkver.h"
 
 
-#line 233 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\sdkddkver.h"
-#line 234 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\sdkddkver.h"
 
+#line 234 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\sdkddkver.h"
+#line 235 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\sdkddkver.h"
 
 
 
 
 
 
-#line 242 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\sdkddkver.h"
-#line 243 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\sdkddkver.h"
 
+#line 243 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\sdkddkver.h"
+#line 244 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\sdkddkver.h"
 
 
 
 
 
-#line 250 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\sdkddkver.h"
 
-#line 252 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\sdkddkver.h"
+#line 251 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\sdkddkver.h"
 
-#line 254 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\sdkddkver.h"
+#line 253 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\sdkddkver.h"
 
-#line 256 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\sdkddkver.h"
+#line 255 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\sdkddkver.h"
 
-#line 258 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\sdkddkver.h"
+#line 257 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\sdkddkver.h"
 
-#line 260 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\sdkddkver.h"
+#line 259 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\sdkddkver.h"
 
-#line 262 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\sdkddkver.h"
+#line 261 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\sdkddkver.h"
 
-#line 264 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\sdkddkver.h"
+#line 263 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\sdkddkver.h"
 
+#line 265 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\sdkddkver.h"
 
-#line 267 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\sdkddkver.h"
-#line 268 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\sdkddkver.h"
 
+#line 268 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\sdkddkver.h"
+#line 269 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\sdkddkver.h"
 
 
 
@@ -660,26 +659,27 @@
 
 
 
-#line 299 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\sdkddkver.h"
+
+#line 300 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\sdkddkver.h"
 
 
 
 #pragma warning(pop)
 
 
-#line 306 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\sdkddkver.h"
-#line 307 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\sdkddkver.h"
+#line 307 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\sdkddkver.h"
+#line 308 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\sdkddkver.h"
 
-#line 309 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\sdkddkver.h"
+#line 310 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\sdkddkver.h"
 
-#line 23 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\windows.h"
+#line 23 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\windows.h"
 
 
 
 
 
 #pragma once
-#line 30 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\windows.h"
+#line 30 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\windows.h"
 
 #pragma region Application Family or OneCore Family
 
@@ -731,7 +731,7 @@
 
 
 
-#line 1 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winresrc.h"
+#line 1 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winresrc.h"
 
 
 
@@ -761,13 +761,13 @@
 
 
 
-#line 31 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winresrc.h"
+#line 31 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winresrc.h"
 
 
 
 
 
-#line 1 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
+#line 1 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
@@ -846,7 +846,7 @@
 
 
 
-#line 80 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
+#line 80 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
@@ -979,6 +979,7 @@
 
 
 
+#line 213 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
@@ -986,7 +987,6 @@
 
 
 
-#line 220 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
@@ -1035,6 +1035,7 @@
 
 
 
+#line 269 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
@@ -1042,7 +1043,6 @@
 
 
 
-#line 276 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
@@ -1084,6 +1084,7 @@
 
 
 
+#line 318 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
@@ -1091,7 +1092,6 @@
 
 
 
-#line 325 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
@@ -1107,21 +1107,21 @@
 
 
 
+#line 341 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
 
 
 
+#line 348 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
-#line 348 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
 
 
 
-#line 355 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
@@ -1183,6 +1183,7 @@
 
 
 
+#line 417 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
@@ -1190,15 +1191,15 @@
 
 
 
-#line 424 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
+#line 425 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
+#line 428 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
 
 
-#line 432 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
@@ -1225,13 +1226,13 @@
 
 
 
+#line 460 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
+#line 461 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
 
 
-#line 464 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
-#line 465 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
@@ -1266,23 +1267,23 @@
 
 
 
+#line 501 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
 
 
-#line 505 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
 
 
+#line 512 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
 
 
-#line 516 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
@@ -1295,21 +1296,21 @@
 
 
 
+#line 530 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
 
+#line 535 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
-#line 534 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
+#line 539 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
-#line 539 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
-#line 543 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
@@ -1321,19 +1322,19 @@
 
 
 
+#line 556 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
 
 
-#line 560 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
+#line 563 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
 
 
-#line 567 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
@@ -1341,12 +1342,12 @@
 
 
 
+#line 576 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
 
 
-#line 580 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
@@ -1373,17 +1374,17 @@
 
 
 
+#line 608 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
+#line 609 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
+#line 610 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
+#line 612 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
+#line 613 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
 
-#line 612 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
-#line 613 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
-#line 614 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
-#line 616 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
-#line 617 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
@@ -1402,66 +1403,66 @@
 
 
 
+#line 637 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
 
+#line 642 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
-#line 641 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
+#line 645 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
-#line 646 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
-#line 649 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
 
+#line 655 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
 
 
-#line 659 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
 
+#line 665 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
 
 
-#line 669 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
 
 
+#line 676 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
 
 
-#line 680 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
 
 
 
+#line 688 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
+#line 691 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
-#line 692 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
-#line 695 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
@@ -1480,17 +1481,17 @@
 
 
 
+#line 715 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
 
+#line 720 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
-#line 719 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
 
-#line 724 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
@@ -1505,54 +1506,54 @@
 
 
 
+#line 740 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
 
 
-#line 744 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
 
+#line 750 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
+#line 753 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
-#line 754 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
+#line 757 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
-#line 757 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
+#line 762 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
-#line 761 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
+#line 766 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
-#line 766 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
-#line 770 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
+#line 773 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
+#line 777 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
-#line 777 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
+#line 782 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
-#line 781 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
 
-#line 786 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
@@ -1573,62 +1574,62 @@
 
 
 
+#line 808 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
+#line 812 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
-#line 812 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
+#line 816 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
-#line 816 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
+#line 821 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
-#line 820 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
 
-#line 825 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
+#line 828 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
 
+#line 833 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
-#line 832 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
+#line 838 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
-#line 837 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
+#line 841 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
-#line 842 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
-#line 845 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
+#line 850 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
 
 
-#line 854 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
+#line 858 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
 
 
-#line 862 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
@@ -1644,12 +1645,12 @@
 
 
 
+#line 879 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
 
 
-#line 883 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
@@ -1681,30 +1682,30 @@
 
 
 
+#line 916 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
 
 
-#line 920 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
 
 
+#line 927 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
+#line 930 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
+#line 932 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
+#line 934 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
-#line 931 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
-#line 934 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
-#line 936 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
-#line 938 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
@@ -1716,12 +1717,12 @@
 
 
 
+#line 951 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
 
 
-#line 955 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
@@ -1764,34 +1765,34 @@
 
 
 
+#line 999 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
+#line 1001 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
 
-#line 1003 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
-#line 1005 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
 
+#line 1011 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
 
 
-#line 1015 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
+#line 1017 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
+#line 1020 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
+#line 1021 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
-#line 1021 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
-#line 1024 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
-#line 1025 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
@@ -1851,12 +1852,12 @@
 
 
 
+#line 1086 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
 
 
-#line 1090 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
@@ -1869,37 +1870,37 @@
 
 
 
+#line 1104 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
 
+#line 1109 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
-#line 1108 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
+#line 1114 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
-#line 1113 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
+#line 1118 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
-#line 1118 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
+#line 1122 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
-#line 1122 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
+#line 1126 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
-#line 1126 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
+#line 1129 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
-#line 1130 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
-#line 1133 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
@@ -1915,12 +1916,12 @@
 
 
 
+#line 1150 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
 
 
-#line 1154 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
@@ -1939,23 +1940,23 @@
 
 
 
+#line 1174 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
+#line 1177 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
-#line 1178 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
-#line 1181 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
+#line 1185 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
 
 
-#line 1189 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
@@ -2007,22 +2008,22 @@
 
 
 
+#line 1242 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
 
+#line 1247 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
-#line 1246 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
+#line 1252 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
-#line 1251 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
 
-#line 1256 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
@@ -2040,12 +2041,12 @@
 
 
 
+#line 1275 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
 
 
-#line 1279 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
@@ -2067,16 +2068,16 @@
 
 
 
+#line 1302 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
+#line 1306 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
-#line 1306 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
-#line 1310 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
@@ -2138,15 +2139,15 @@
 
 
 
+#line 1373 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
+#line 1376 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
-#line 1377 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
-#line 1380 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
@@ -2154,15 +2155,15 @@
 
 
 
+#line 1389 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
+#line 1392 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
-#line 1393 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
-#line 1396 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
@@ -2171,15 +2172,15 @@
 
 
 
+#line 1406 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
+#line 1409 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
-#line 1410 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
-#line 1413 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
@@ -2187,18 +2188,18 @@
 
 
 
+#line 1422 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
 
 
-#line 1426 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
+#line 1428 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
 
 
-#line 1432 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
@@ -2209,23 +2210,23 @@
 
 
 
+#line 1444 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
 
+#line 1449 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
-#line 1448 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
+#line 1454 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
+#line 1455 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
-#line 1453 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
 
-#line 1458 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
-#line 1459 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
@@ -2241,12 +2242,12 @@
 
 
 
+#line 1476 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
 
 
-#line 1480 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
@@ -2285,21 +2286,21 @@
 
 
 
+#line 1520 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
 
+#line 1525 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
-#line 1524 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
+#line 1529 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
-#line 1529 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
-#line 1533 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
@@ -2330,12 +2331,12 @@
 
 
 
+#line 1565 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
 
 
-#line 1569 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
@@ -2347,12 +2348,12 @@
 
 
 
+#line 1582 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
 
 
-#line 1586 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
@@ -2361,23 +2362,23 @@
 
 
 
+#line 1596 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
+#line 1599 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
-#line 1600 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
-#line 1603 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
+#line 1607 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
 
 
-#line 1611 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
@@ -2398,15 +2399,15 @@
 
 
 
+#line 1633 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
+#line 1636 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
-#line 1637 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
-#line 1640 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
@@ -2414,12 +2415,12 @@
 
 
 
+#line 1649 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
 
 
-#line 1653 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
@@ -2440,16 +2441,16 @@
 
 
 
+#line 1675 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
+#line 1679 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
-#line 1679 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
-#line 1683 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
@@ -2466,12 +2467,12 @@
 
 
 
+#line 1701 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
 
 
-#line 1705 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
@@ -2489,12 +2490,12 @@
 
 
 
+#line 1724 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
 
 
-#line 1728 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
@@ -2506,12 +2507,12 @@
 
 
 
+#line 1741 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
 
 
 
 
 
-#line 1745 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
 
 
 
@@ -2544,14 +2545,14 @@
 
 
 
+#line 1779 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winuser.rh"
+#line 37 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winresrc.h"
+#line 1 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\commctrl.rh"
 
 
 
 
 
-#line 1783 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winuser.rh"
-#line 37 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winresrc.h"
-#line 1 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\commctrl.rh"
 
 
 
@@ -2574,18 +2575,18 @@
 
 
 
+#line 29 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\commctrl.rh"
 
 
 
 
 
-#line 29 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\commctrl.rh"
+#line 35 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\commctrl.rh"
 
 
 
 
 
-#line 35 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\commctrl.rh"
 
 
 
@@ -2631,12 +2632,12 @@
 
 
 
+#line 86 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\commctrl.rh"
 
 
 
 
 
-#line 86 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\commctrl.rh"
 
 
 
@@ -2660,16 +2661,16 @@
 
 
 
+#line 115 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\commctrl.rh"
 
 
 
+#line 119 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\commctrl.rh"
 
 
-#line 115 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\commctrl.rh"
 
 
 
-#line 119 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\commctrl.rh"
 
 
 
@@ -2684,16 +2685,16 @@
 
 
 
+#line 139 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\commctrl.rh"
 
 
 
+#line 143 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\commctrl.rh"
 
 
-#line 139 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\commctrl.rh"
 
 
 
-#line 143 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\commctrl.rh"
 
 
 
@@ -2713,12 +2714,12 @@
 
 
 
+#line 168 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\commctrl.rh"
 
 
 
 
 
-#line 168 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\commctrl.rh"
 
 
 
@@ -2763,12 +2764,12 @@
 
 
 
+#line 218 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\commctrl.rh"
 
 
 
 
 
-#line 218 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\commctrl.rh"
 
 
 
@@ -2776,15 +2777,15 @@
 
 
 
+#line 231 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\commctrl.rh"
 
 
+#line 234 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\commctrl.rh"
 
 
 
-#line 231 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\commctrl.rh"
 
 
-#line 234 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\commctrl.rh"
 
 
 
@@ -2819,12 +2820,12 @@
 
 
 
+#line 274 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\commctrl.rh"
 
 
 
 
 
-#line 274 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\commctrl.rh"
 
 
 
@@ -2866,13 +2867,13 @@
 
 
 
+#line 38 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winresrc.h"
+#line 1 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\dde.rh"
 
 
 
 
 
-#line 38 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winresrc.h"
-#line 1 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\dde.rh"
 
 
 
@@ -2898,13 +2899,13 @@
 
 
 
+#line 39 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winresrc.h"
+#line 1 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winnt.rh"
 
 
 
 
 
-#line 39 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winresrc.h"
-#line 1 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winnt.rh"
 
 
 
@@ -2919,12 +2920,12 @@
 
 
 
+#line 21 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winnt.rh"
 
 
 
 
 
-#line 21 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winnt.rh"
 
 
 
@@ -3435,13 +3436,8 @@
 
 
 
-
-
-
-
-
-#line 40 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winresrc.h"
-#line 1 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\dlgs.h"
+#line 40 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winresrc.h"
+#line 1 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\dlgs.h"
 
 
 
@@ -3687,23 +3683,18 @@
 
 
 
-#line 247 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\dlgs.h"
+#line 247 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\dlgs.h"
 
 
 
 
-#line 252 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\dlgs.h"
-
-
-
-
-
-#line 258 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\dlgs.h"
+#line 252 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\dlgs.h"
 
 
 
 
 
+#line 258 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\dlgs.h"
 
 
 
@@ -3715,13 +3706,18 @@
 
 
 
-#line 275 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\dlgs.h"
+
+
+
+
+
+#line 275 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\dlgs.h"
 #pragma endregion
 
 
-#line 279 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\dlgs.h"
-#line 41 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winresrc.h"
-#line 1 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winver.h"
+#line 279 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\dlgs.h"
+#line 41 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winresrc.h"
+#line 1 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winver.h"
 
 
 
@@ -3739,7 +3735,7 @@
 
 
 
-#line 1 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\SpecStrings.h"
+#line 1 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\SpecStrings.h"
 
 
 
@@ -3757,46 +3753,46 @@
 
 
 #pragma once
-#line 19 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\SpecStrings.h"
+#line 19 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\SpecStrings.h"
 
 
 #pragma warning(push)
 #pragma warning(disable:4668) 
-#line 24 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\SpecStrings.h"
+#line 24 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\SpecStrings.h"
 
 
 
  
 
-#line 30 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\SpecStrings.h"
+#line 30 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\SpecStrings.h"
   
- #line 32 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\SpecStrings.h"
+ #line 32 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\SpecStrings.h"
 
  
 
 
 
   
- #line 39 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\SpecStrings.h"
+ #line 39 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\SpecStrings.h"
 
  
   
   
- #line 44 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\SpecStrings.h"
+ #line 44 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\SpecStrings.h"
 
-#line 46 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\SpecStrings.h"
-
-
+#line 46 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\SpecStrings.h"
 
 
 
 
 
-#line 54 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\SpecStrings.h"
 
-#line 56 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\SpecStrings.h"
 
-#line 58 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\SpecStrings.h"
+#line 54 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\SpecStrings.h"
+
+#line 56 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\SpecStrings.h"
+
+#line 58 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\SpecStrings.h"
 
 
 
@@ -7167,12 +7163,12 @@
 #line 395 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.24.28314\\include\\concurrencysal.h"
 #line 2971 "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.24.28314\\include\\sal.h"
 
-#line 62 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\SpecStrings.h"
+#line 62 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\SpecStrings.h"
 
 
 
 
-#line 67 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\SpecStrings.h"
+#line 67 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\SpecStrings.h"
 
 
 
@@ -7205,7 +7201,7 @@
 
 
 
-#line 100 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\SpecStrings.h"
+#line 100 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\SpecStrings.h"
 
 
 
@@ -7218,7 +7214,7 @@
 
 
 
-#line 113 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\SpecStrings.h"
+#line 113 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\SpecStrings.h"
 
 
 
@@ -7322,7 +7318,7 @@
 
 
 
-#line 217 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\SpecStrings.h"
+#line 217 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\SpecStrings.h"
 
 
 
@@ -7425,7 +7421,7 @@
 
 
 
-#line 320 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\SpecStrings.h"
+#line 320 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\SpecStrings.h"
 
 
 
@@ -7485,7 +7481,7 @@
 
 
 
-#line 380 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\SpecStrings.h"
+#line 380 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\SpecStrings.h"
 
 
 
@@ -7573,7 +7569,7 @@
 
 
 
-#line 468 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\SpecStrings.h"
+#line 468 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\SpecStrings.h"
 
 
 
@@ -7593,16 +7589,16 @@
 
 
 
-#line 488 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\SpecStrings.h"
+#line 488 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\SpecStrings.h"
 
 
 
 
 
-#line 494 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\SpecStrings.h"
+#line 494 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\SpecStrings.h"
 
 
-#line 497 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\SpecStrings.h"
+#line 497 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\SpecStrings.h"
 
 
 
@@ -7671,7 +7667,7 @@
 
 
 
-#line 566 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\SpecStrings.h"
+#line 566 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\SpecStrings.h"
 
 
 
@@ -7682,7 +7678,7 @@
 
 
 
-#line 577 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\SpecStrings.h"
+#line 577 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\SpecStrings.h"
 
 
 
@@ -7713,7 +7709,7 @@
 
 
 
-#line 608 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\SpecStrings.h"
+#line 608 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\SpecStrings.h"
 
 
 
@@ -7730,7 +7726,7 @@
 
 
 
-#line 625 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\SpecStrings.h"
+#line 625 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\SpecStrings.h"
 
 
 
@@ -7748,7 +7744,7 @@
 
 
 
-#line 643 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\SpecStrings.h"
+#line 643 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\SpecStrings.h"
 
 
 
@@ -7781,7 +7777,7 @@
 
 
 
-#line 676 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\SpecStrings.h"
+#line 676 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\SpecStrings.h"
 
 
 
@@ -7799,9 +7795,9 @@
 
 
 
-#line 694 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\SpecStrings.h"
+#line 694 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\SpecStrings.h"
 
-#line 1 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\driverspecs.h"
+#line 1 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\driverspecs.h"
 
 
 
@@ -7926,7 +7922,7 @@
 
 
 
-#line 1 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\sdv_driverspecs.h"
+#line 1 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\sdv_driverspecs.h"
 
 
 
@@ -7948,13 +7944,13 @@
 
 
 
-#line 23 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\sdv_driverspecs.h"
-#line 126 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\driverspecs.h"
+#line 23 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\sdv_driverspecs.h"
+#line 126 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\driverspecs.h"
 
 
 
 #pragma once
-#line 131 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\driverspecs.h"
+#line 131 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\driverspecs.h"
 
 
 
@@ -8078,7 +8074,7 @@
 
 
 
-#line 255 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\driverspecs.h"
+#line 255 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\driverspecs.h"
 
     
     
@@ -8095,7 +8091,7 @@
     
     
 
-#line 272 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\driverspecs.h"
+#line 272 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\driverspecs.h"
 
     
     
@@ -8522,9 +8518,9 @@
     
     
     
-#line 700 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\driverspecs.h"
+#line 700 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\driverspecs.h"
     
-#line 702 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\driverspecs.h"
+#line 702 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\driverspecs.h"
     
 
 
@@ -8710,7 +8706,7 @@
     
     
 
-#line 887 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\driverspecs.h"
+#line 887 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\driverspecs.h"
 
     
     
@@ -8724,11 +8720,9 @@
 
 
 
-#line 901 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\driverspecs.h"
+#line 901 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\driverspecs.h"
 
-#line 696 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\SpecStrings.h"
-
-
+#line 696 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\SpecStrings.h"
 
 
 
@@ -8739,15 +8733,17 @@
 
 
 
-#line 709 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\SpecStrings.h"
+
+
+#line 709 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\SpecStrings.h"
 
 
 #pragma warning(pop)
-#line 713 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\SpecStrings.h"
+#line 713 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\SpecStrings.h"
 
-#line 715 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\shared\\SpecStrings.h"
-#line 19 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winver.h"
-#line 1 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\verrsrc.h"
+#line 715 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\shared\\SpecStrings.h"
+#line 19 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winver.h"
+#line 1 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\verrsrc.h"
 
 
 
@@ -8760,7 +8756,7 @@
 
 
 
-#pragma region Application Family or OneCore Family
+#pragma region Application Family or OneCore Family or Games Family
 
 
 
@@ -8773,7 +8769,7 @@
 
 
 
-#line 27 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\verrsrc.h"
+#line 27 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\verrsrc.h"
 
 
 
@@ -8834,7 +8830,7 @@
 
 
 
-#line 88 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\verrsrc.h"
+#line 88 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\verrsrc.h"
 #pragma endregion
 
 #pragma region Desktop Family or OneCore Family or Games Family
@@ -8917,10 +8913,10 @@
 
 
 
-#line 171 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\verrsrc.h"
+#line 171 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\verrsrc.h"
 #pragma endregion
 
-#line 20 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winver.h"
+#line 20 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winver.h"
 
 
 
@@ -8967,7 +8963,7 @@
 
 
 
-#line 67 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winver.h"
+#line 67 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winver.h"
 #pragma endregion
 
 #pragma region Desktop Family
@@ -9007,106 +9003,7 @@
 
 
 
-#line 107 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winver.h"
-#pragma endregion
-
-#pragma region Desktop Family or OneCore Family
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#line 161 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winver.h"
-#pragma endregion
-
-#pragma region Application or OneCore Family
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#line 195 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winver.h"
-#pragma endregion
-
-#pragma region Desktop Family
-
-
-
-
-
-
-
-#line 206 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winver.h"
+#line 107 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winver.h"
 #pragma endregion
 
 #pragma region Application Family or OneCore Family
@@ -9159,7 +9056,96 @@
 
 
 
-#line 259 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winver.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#line 185 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winver.h"
+#pragma endregion
+
+#pragma region Desktop Family
+
+
+
+
+
+
+
+#line 196 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winver.h"
+#pragma endregion
+
+#pragma region Application Family or OneCore Family
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#line 249 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winver.h"
 #pragma endregion
 
 
@@ -9167,12 +9153,12 @@
 
 
 
-#line 267 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winver.h"
+#line 257 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winver.h"
 
-#line 42 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winresrc.h"
+#line 42 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winresrc.h"
 
-#line 44 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\winresrc.h"
-#line 82 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\windows.h"
+#line 44 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\winresrc.h"
+#line 82 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\windows.h"
 
 
 
@@ -9355,14 +9341,14 @@
 
 
 
-#line 265 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\windows.h"
+#line 265 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\windows.h"
 
-#line 267 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\windows.h"
+#line 267 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\windows.h"
 #pragma endregion
 
-#line 270 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\windows.h"
+#line 270 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\windows.h"
 
-#line 272 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.18362.0\\um\\windows.h"
+#line 272 "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.19041.0\\um\\windows.h"
 
 #line 3 "C:\\Users\\Jonny0815\\source\\repos\\CGA218CMake\\libs\\glew-2.1.0\\build\\glew.rc"
 

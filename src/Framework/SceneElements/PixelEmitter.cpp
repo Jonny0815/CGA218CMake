@@ -63,7 +63,7 @@ void PixelEmitter::draw()
 
 
 }
-void PixelEmitter::render(ShaderProgram* shader, float dt)
+void PixelEmitter::render(ShaderProgram* shader, float dt, vec3 camPos)
 {
 	
 	if (m_shader->prog == shader->prog)
@@ -104,8 +104,10 @@ vec3 PixelEmitter::randomBetween(vec3 lowerBound, vec3 higherBound)
 float PixelEmitter::randomBetween(float lowerBound, float higherBound)
 {
 	float range = higherBound - lowerBound;
-	float i = (rand() % 2000 - 1000.0f) / 1000.0f; 
-	return i;
+	int r = rand();
+	float i = (r % 2000 - 1000.0f) / 1000.0f;
+	float j = ((float(rand()) / float(RAND_MAX)) * (higherBound - lowerBound)) + lowerBound;
+	return j;
 }
 
 void PixelEmitter::initializeEmitter()

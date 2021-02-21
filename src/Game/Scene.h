@@ -13,6 +13,7 @@
 #include "PointLight.h"
 #include "Skybox.h"
 #include "PixelEmitter.h"
+#include "FireEmitter.h"
 
 class Scene
 {
@@ -49,7 +50,7 @@ private:
 	Skybox* skybox = nullptr;
 	vector<Renderable> renderables;
 	vector<PointLight> pointLights;
-	vector<PixelEmitter> pixelEmitters;
+	vector<PixelEmitter*> pixelEmitters;
 
 	void loadOBJtoRenderables(string path, Material mat, Type t);
 

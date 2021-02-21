@@ -7,35 +7,38 @@
 #include <algorithm>
 #include <stdlib.h>
 #include "Material.h"
-using namespace glm; 
-class PixelEmitter : public Transform{
-public: 
-	PixelEmitter(); 
-	PixelEmitter(ShaderProgram * shader); 
-	void virtual render(ShaderProgram * shader, float dt);
+using namespace glm;
+class PixelEmitter : public Transform {
+public:
+	PixelEmitter();
+	PixelEmitter(ShaderProgram* shader);
+	void virtual render(ShaderProgram* shader, float dt, vec3 camPosition);
 	void setMaterial(Material mat);
-	void draw();
-	void update(float dt);
-protected: 
+protected:
+	vec3 randomBetween(vec3 lowerBound, vec3 higherBound);
+	float randomBetween(float lowerBound, float higherBound);
+
+	bool materialSet = false;
+	Material _mat;
+
+private:
 	struct Particle
 	{
 		vec3 position;
 		float lifetime;
 	};
-	
-	vec3 randomBetween(vec3 lowerBound, vec3 higherBound); 
-	float randomBetween(float lowerBound, float higherBound); 
+	void draw();
+	void update(float dt);
 
 	std::vector<Particle> particles;
 	float positions[400];
 	GLuint vertexBuffer;
 	GLuint positionBuffer;
-	GLuint vertexArray; 
+	GLuint vertexArray;
 	//Gluint billboard_vertex_buffer; 
-	void initializeEmitter(); 
-	ShaderProgram* m_shader; 
-	bool materialSet = false; 
-	Material _mat; 
+	void initializeEmitter();
+	ShaderProgram* m_shader;
+
 };
 
 
