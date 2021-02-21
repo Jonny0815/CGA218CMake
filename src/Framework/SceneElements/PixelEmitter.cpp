@@ -1,5 +1,6 @@
 #include "PixelEmitter.h"
 #include <time.h>
+#include <math.h>
 
 PixelEmitter::PixelEmitter()
 {
@@ -18,20 +19,21 @@ void PixelEmitter::update(float dt)
 	for (uint i = 0; i < this->particles.size(); ++i)
 	{
 		// subtract from the particles lifetime
-		this->particles[i].lifetime -= dt;
+		this->particles[i].lifetime -= dt/2;
 
 		// if the lifetime is below 0 respawn the particle
 		if (this->particles[i].lifetime <= 0.0f)
 		{
 			this->particles[i].position = randomBetween(vec3(-1.0f), vec3(1.0f));
-			this->particles[i].lifetime = randomBetween(1.0f, 2.0f);
+			this->particles[i].lifetime = randomBetween(3.0f, 4.0f);
 			//this->particles[i].position = vec3(1.0f);
 			//this->particles[i].lifetime = 1.5f;
 		}
 
 		// move the particle down depending on the delta time
 		//this->particles[i].position -= vec3(0.0f, dt * 2.0f, 0.0f);
-		this->particles[i].position -= vec3(0.0f, dt, 0.0f);
+		//this->particles[i].position -= vec3(0.0f, dt, 0.0f);
+		this->particles[i].position -= vec3(0.0 + sin(particles[i].lifetime)*0.002, dt, 0.0 + cos(particles[i].lifetime)*0.0015);
 
 		// update the position buffer
 		this->positions[i * 4 + 0] = this->particles[i].position[0];
@@ -67,7 +69,7 @@ void PixelEmitter::render(ShaderProgram* shader, float dt)
 	if (m_shader->prog == shader->prog)
 	{
 		update(dt);
-		m_shader->setUniform("particleSize", 0.1f);
+		m_shader->setUniform("particleSize", 0.2f);
 		if (materialSet) {
 			_mat.render();
 		}

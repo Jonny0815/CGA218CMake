@@ -134,8 +134,12 @@ bool Scene::init()
 		renderables[30].setPosition(glm::vec3(4.7, -0.3, -2.0));
 
 		pixelEmitters.push_back(PixelEmitter(m_assets.getShaderProgram("pixelemitter")));
+		pixelEmitters.push_back(PixelEmitter(m_assets.getShaderProgram("pixelemitter")));
 		pixelEmitters[0].setPosition(vec3(1.0, 3.0, 1.0));
-		pixelEmitters[0].setMaterial(Material("assets/textures/heart.png", "assets/textures/heart.png", "assets/textures/heart.png", 0.2, false, m_assets.getShaderProgram("pixelemitter")));
+		pixelEmitters[0].setMaterial(Material("assets/textures/leaf.png", "assets/textures/leaf.png", "assets/textures/leaf.png", 0.2, false, m_assets.getShaderProgram("pixelemitter")));
+		pixelEmitters[1].setPosition(vec3(-3.0, 3.0, 1.0));
+		pixelEmitters[1].setMaterial(Material("assets/textures/leaf2.png", "assets/textures/leaf2.png", "assets/textures/leaf2.png", 0.2, false, m_assets.getShaderProgram("pixelemitter")));
+		//pixelEmitters[0].setMaterial(Material("assets/textures/heart.png", "assets/textures/heart.png", "assets/textures/heart.png", 0.2, false, m_assets.getShaderProgram("pixelemitter")));
 		//renderables[0].setScale(glm::vec3(0.10, 0.10, 0.10));
 		//renderables[0].setScale(glm::vec3(100, 100, 100));
 		vec3 angles(270, 0, 0);
@@ -161,7 +165,7 @@ bool Scene::init()
 		pointLights[0].setParent(&renderables[1]);
 
 		//mv_cameras[0]->translate(vec3(0.0, 5.0, -2.0));
-		mv_cameras[0]->setPosition(vec3(-3.88, 2.12, -8.12));
+		mv_cameras[0]->setPosition(vec3(-3.88, 1.12, -8.12));
 
 		//mv_cameras[1]->setParent(&renderables[1]);
 
