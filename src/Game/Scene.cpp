@@ -61,87 +61,22 @@ bool Scene::init()
 		
 		
 		loadOBJtoRenderables("assets/models/ground.obj", Material("assets/textures/ground.png", "assets/textures/ground.png", "assets/textures/ground.png", 0.2, false, m_assets.getShaderProgram("ground")), Type::Ground);
-		//loadOBJtoRenderables("assets/models/HQ_Movie cycle_lookY.obj", glm::vec3(0, 0.7, 0.6), glm::vec3(0.6, 0, 0.4), glm::vec3(1, 0, 1), 0.4);
-		//loadOBJtoRenderables("assets/models/sphere.obj", glm::vec3(0.2, 0.7, 0.6), glm::vec3(0.6, 0.1, 0.1), glm::vec3(1,0,0), 0.2);
-		//loadOBJtoRenderables("assets/models/sphere.obj", glm::vec3(0.2, 0.7, 0.6), glm::vec3(0.6, 0.1, 0.1), glm::vec3(1,0,0), 0.2);
-		//loadOBJtoRenderables("assets/models/sphere.obj", glm::vec3(0.2, 0.7, 0.6), glm::vec3(0.6, 0.1, 0.1), glm::vec3(1,0,0), 0.2);
-		//loadOBJtoRenderables("assets/models/sphere.obj", glm::vec3(0.2, 0.7, 0.6), glm::vec3(0.6, 0.1, 0.1), glm::vec3(1,0,0), 0.2);
+		loadOBJtoRenderables("assets/models/torwart.obj", Material("assets/textures/ground.png", "assets/textures/ground.png", "assets/textures/ground.png", 0.2, false, m_assets.getShaderProgram("shader")), Type::Tree);
 		
+
 
 		//loadOBJtoRenderables("assets/models/sphere.obj", Material("assets/textures/red.png", "assets/textures/blue.png", "assets/textures/green.png", 0.2, false, m_assets.getShaderProgram("shader2")));
 		//loadOBJtoRenderables("assets/models/sphere.obj", Material("assets/textures/red.png", "assets/textures/blue.png", "assets/textures/green.png", 0.2, false, m_assets.getShaderProgram("shader2")));
 		//loadOBJtoRenderables("assets/models/sphere.obj", Material("assets/textures/red.png", "assets/textures/blue.png", "assets/textures/green.png", 0.2, false, m_assets.getShaderProgram("shader2")));
 		//loadOBJtoRenderables("assets/models/sphere.obj", Material("assets/textures/red.png", "assets/textures/blue.png", "assets/textures/green.png", 0.2, false, m_assets.getShaderProgram("shader2")));
 		//loadOBJtoRenderables("assets/models/sphere.obj", Material("assets/textures/red.png", "assets/textures/blue.png", "assets/textures/green.png", 0.2, false, m_assets.getShaderProgram("shader")));
-		loadOBJtoRenderables("assets/models/tree0.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.9, false, m_assets.getShaderProgram("shader")), Type::Tree);
-		loadOBJtoRenderables("assets/models/tree1.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
-		loadOBJtoRenderables("assets/models/tree2.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.0, false, m_assets.getShaderProgram("shader")), Type::Tree);
-		loadOBJtoRenderables("assets/models/tree3.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
-		loadOBJtoRenderables("assets/models/tree4.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
-		loadOBJtoRenderables("assets/models/tree5.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
-		loadOBJtoRenderables("assets/models/tree6.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
-		loadOBJtoRenderables("assets/models/tree7.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
-		loadOBJtoRenderables("assets/models/tree8.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
-		loadOBJtoRenderables("assets/models/tree9.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
-		loadOBJtoRenderables("assets/models/tree0.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.9, false, m_assets.getShaderProgram("shader")), Type::Tree);
-		loadOBJtoRenderables("assets/models/tree1.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
-		loadOBJtoRenderables("assets/models/tree2.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.0, false, m_assets.getShaderProgram("shader")), Type::Tree);
-		loadOBJtoRenderables("assets/models/tree3.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
-		loadOBJtoRenderables("assets/models/tree4.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
-		loadOBJtoRenderables("assets/models/tree5.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
-		loadOBJtoRenderables("assets/models/tree6.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
-		loadOBJtoRenderables("assets/models/tree7.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
-		loadOBJtoRenderables("assets/models/tree8.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
-		loadOBJtoRenderables("assets/models/tree9.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
-		loadOBJtoRenderables("assets/models/tree0.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.9, false, m_assets.getShaderProgram("shader")), Type::Tree);
-		loadOBJtoRenderables("assets/models/tree1.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
-		loadOBJtoRenderables("assets/models/tree2.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.0, false, m_assets.getShaderProgram("shader")), Type::Tree);
-		loadOBJtoRenderables("assets/models/tree3.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
-		loadOBJtoRenderables("assets/models/tree4.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
-		loadOBJtoRenderables("assets/models/tree5.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
-		loadOBJtoRenderables("assets/models/tree6.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
-		loadOBJtoRenderables("assets/models/tree7.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
-		loadOBJtoRenderables("assets/models/tree8.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
-		loadOBJtoRenderables("assets/models/tree9.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
-		loadOBJtoRenderables("assets/models/fireplace.obj", Material("assets/textures/fireplace.png", "assets/textures/fireplace.png", "assets/textures/fireplace.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
+		//loadOBJtoRenderables("assets/models/tree9.obj", Material("assets/textures/tree_diff.png", "assets/textures/tree_emis.png", "assets/textures/tree_spec.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
+		//loadOBJtoRenderables("assets/models/fireplace.obj", Material("assets/textures/fireplace.png", "assets/textures/fireplace.png", "assets/textures/fireplace.png", 0.1, false, m_assets.getShaderProgram("shader")), Type::Tree);
 
 		//renderables[0].setPosition(glm::vec3(0.0, -2.0, 0.0));
-		renderables[1].setPosition(glm::vec3(3.24, 0.1, -0.4));
-		renderables[2].setPosition(glm::vec3(2.3, 0.3, 1.0));
-		renderables[3].setPosition(glm::vec3(-3.8, 0.0, 0.6));
-		renderables[4].setPosition(glm::vec3(-5.5, -0.3, -2.7));
-		renderables[5].setPosition(glm::vec3(5.5, -0.5, -1.3));
-		renderables[6].setPosition(glm::vec3(5.1, 0.0, 0.2));
-		renderables[7].setPosition(glm::vec3(-0.1, 0.0, 1.7));
-		renderables[8].setPosition(glm::vec3(-2.0, -0.3, 2.0));
-		renderables[9].setPosition(glm::vec3(-7.0, 0.0, 2.0));
-		renderables[10].setPosition(glm::vec3(0.7, -0.3, -2.0));
 
-		renderables[11].setPosition(glm::vec3(3.24, 0.1, 2.4));
-		renderables[12].setPosition(glm::vec3(2.3, 0.3, 3.0));
-		renderables[13].setPosition(glm::vec3(-3.8, 0.0, 2.6));
-		renderables[14].setPosition(glm::vec3(-5.5, -0.3, 0.7));
-		renderables[15].setPosition(glm::vec3(5.5, -0.5, 1.3));
-		renderables[16].setPosition(glm::vec3(5.1, 0.0, 2.2));
-		renderables[17].setPosition(glm::vec3(-0.1, 0.0, 3.7));
-		renderables[18].setPosition(glm::vec3(-2.0, -0.3, 3.0));
-		renderables[19].setPosition(glm::vec3(-7.0, 0.0, 4.0));
-		renderables[20].setPosition(glm::vec3(0.7, -0.3, 2.0));
 
-		renderables[21].setPosition(glm::vec3(6.24, 0.1, -0.4));
-		renderables[22].setPosition(glm::vec3(4.3, 0.3, 1.0));
-		renderables[23].setPosition(glm::vec3(1.8, 0.0, 0.6));
-		renderables[24].setPosition(glm::vec3(-1.5, -0.3, -2.7));
-		renderables[25].setPosition(glm::vec3(9.5, -0.5, -1.3));
-		renderables[26].setPosition(glm::vec3(8.1, 0.0, 0.2));
-		renderables[27].setPosition(glm::vec3(4.1, 0.0, 1.7));
-		renderables[28].setPosition(glm::vec3(3.0, -0.3, 2.0));
-		renderables[29].setPosition(glm::vec3(-3.0, 0.0, 2.0));
-		renderables[30].setPosition(glm::vec3(4.7, -0.3, -2.0));
-
-		renderables[31].setPosition(vec3(-4.0, -0.7, -2));
-
-		pixelEmitters.push_back(new PixelEmitter(m_assets.getShaderProgram("pixelemitter")));
+		/*pixelEmitters.push_back(new PixelEmitter(m_assets.getShaderProgram("pixelemitter")));
 		pixelEmitters.push_back(new PixelEmitter(m_assets.getShaderProgram("pixelemitter")));
 		pixelEmitters.push_back(new FireEmitter(m_assets.getShaderProgram("fireemitter")));
 		pixelEmitters[0]->setPosition(vec3(1.0, 3.0, 1.0));
@@ -151,7 +86,7 @@ bool Scene::init()
 		pixelEmitters[2]->setPosition(vec3(0.8, 1.2, -0.2));
 		pixelEmitters[2]->setParent(&renderables[31]);
 		pixelEmitters[2]->setMaterial(Material("assets/textures/ParticleAtlas.png", "assets/textures/ParticleAtlas.png", "assets/textures/ParticleAtlas.png", 0.2, false, m_assets.getShaderProgram("fireemitter")));
-		//pixelEmitters[0].setMaterial(Material("assets/textures/heart.png", "assets/textures/heart.png", "assets/textures/heart.png", 0.2, false, m_assets.getShaderProgram("pixelemitter")));
+		*///pixelEmitters[0].setMaterial(Material("assets/textures/heart.png", "assets/textures/heart.png", "assets/textures/heart.png", 0.2, false, m_assets.getShaderProgram("pixelemitter")));
 		//renderables[0].setScale(glm::vec3(0.10, 0.10, 0.10));
 		//renderables[0].setScale(glm::vec3(100, 100, 100));
 		vec3 angles(270, 0, 0);

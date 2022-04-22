@@ -19,7 +19,7 @@ OBJResult OBJLoader::loadOBJ(const std::string & objpath, bool calcnormals, bool
 		std::ifstream stream(objpath, std::ios_base::in | std::ios_base::binary);
 		stream.exceptions(std::ifstream::badbit);
 		if(!stream.is_open())
-			throw std::logic_error("OBJ file not found.");
+			throw std::logic_error("OBJ file not found: " + objpath);
 		std::string command = "";
 		DataCache cache;
 		while (istreamhelper::peekString(stream, command))
